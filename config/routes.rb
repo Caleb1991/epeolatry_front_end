@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  resources :reader, only: [:new, :create]
+  # resources :reader, only: [:new, :create]
 end
