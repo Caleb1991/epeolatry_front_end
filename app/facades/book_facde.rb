@@ -6,6 +6,7 @@ class BookFacade
     books = json.each do |book_attributes|
       Book.new(book_attributes)
     end
+    #feel this may be a good start, but right now with too much unknown as to the json response, this may need retooling
   end
 
   def self.get_single_book(user_id, book_id)
@@ -16,5 +17,6 @@ class BookFacade
     end
 
     Book.new(book_attributes)
+    #for right now this seems the easiest way to do this, but we could send something else over
   end
 end

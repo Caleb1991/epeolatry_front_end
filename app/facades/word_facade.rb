@@ -6,6 +6,7 @@ class WordFacade
     words = json.each do |word_attributes|
       Word.new(word_attributes)
     end
+    #same as books, hoping this is a good start, but may need retooling
   end
 
   def self.get_one_user_word(user_id, word_id)
@@ -16,5 +17,6 @@ class WordFacade
     end
 
     Word.new(word_attributes)
+    #also same as books, hoping this template is helpful
   end
 end
