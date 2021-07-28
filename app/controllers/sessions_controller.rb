@@ -18,4 +18,5 @@ class SessionsController < ApplicationController
     access_token: auth_hash['credentials']['token']
     }
   end
+
 end
