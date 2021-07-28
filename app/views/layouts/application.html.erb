@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <% if session[:user_id] %>
+    <%= link_to "Log Out", '/sessions'  %>
+    <% end %>
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+      <% end %>
     <%= yield %>
   </body>
 </html>
