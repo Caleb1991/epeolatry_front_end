@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   # resources :reader, only: [:new, :create]
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  get '/dashboard', to: 'user/dashboard#show'
+  get '/dashboard', to: 'users/dashboard#show'
 
 end
