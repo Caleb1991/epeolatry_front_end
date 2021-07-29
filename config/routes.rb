@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :dashboard, only: [:show]
     resources :books
     resources :words
+    #to be cut down dependent on needed methods
   end
 end

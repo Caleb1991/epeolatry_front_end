@@ -13,7 +13,7 @@ RSpec.describe 'Welcome Page' do
 
     it 'displays option to login through Google' do
       expect(page).to have_link("Login with Google")
-      click("Login with Google")
+      # click_link("Login with Google")
       # expect(current_path).to eq('https://accounts.google.com/o/oauth2/auth/oauthchooseaccount')
     end
 
