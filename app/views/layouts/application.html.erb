@@ -11,6 +11,7 @@
 
   <body>
     <% if session[:user_id] %>
+    <h1><%= "#{@greetings.sample}, #{@current_user.username}!" %></h1>
     <%= link_to "Log Out", '/sessions'  %>
     <% end %>
     <% flash.each do |type, msg| %>
