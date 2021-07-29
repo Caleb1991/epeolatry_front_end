@@ -1,0 +1,5 @@
+<% @books.each do |book| %>
+  <p><%= link_to "#{book.title}". "/users/books/#{book.id}" %></p>
+  <p>Author: <%= book.author %></p>
+  <p>Genre: <%= book.genre %></p>
+<% end %>

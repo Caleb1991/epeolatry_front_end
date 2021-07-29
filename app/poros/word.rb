@@ -5,7 +5,8 @@ class Word
               :part_of_speech,
               :example,
               :synonyms,
-              :language
+              :language,
+              :id
 
   def initialize(json)
       @word = json
@@ -15,6 +16,7 @@ class Word
       @example = json
       @synonyms = json
       @language = json
+      @id = json
       #will need to acces the key of the json response for each attribute
   end
 end
