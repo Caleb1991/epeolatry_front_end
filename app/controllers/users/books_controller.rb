@@ -1,11 +1,8 @@
 class Users::BooksController < ApplicationController
   def index
     if params.include?('title_filter')
-      all_books = BookFacade.get_all_books(sessions[:user_id], params[:page])
+      @books = BookFacade.get_books_with_title_filter(sessions[:user_id], params[:page], params[:title_filter])
       #may want to send a page_number as well. Since there is no book table here, the pagination will be handled via the api, but we'd need to specifiy which page.
-      @books = all_books.find_all do |book|
-        book.title == params[:title_filter]
-      end
     elsif params.include?('author_filter')
       all_books = BookFacade.get_all_books(sessions[:user_id], params[:page])
       @books = all_books.find_all do |book|
