@@ -1,5 +1,12 @@
 class WordFacade
 
+  def self.search(word)
+    attributes = WordServices.search(word)
+    attributes.map do |attribute|
+      test = WordPoro.new(attribute[1][:attributes])
+    end
+  end
+
   def self.get_all_users_words(user_id)
     json = WordsApiServices.get_users_words(user_id)
 

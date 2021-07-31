@@ -1,4 +1,10 @@
-class WordsApiServices
+class WordServices
+  def self.search(word)
+    response = Faraday.get("https://epeolatry-back-end.herokuapp.com/words/search?q=#{word}")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.get_users_words(user_id, page_number)
     response = Faraday.get('') do |req|
       req.params[''] = user_id
