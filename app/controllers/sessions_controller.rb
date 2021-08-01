@@ -1,8 +1,10 @@
 class SessionsController < ApplicationController
   def create
+    binding.pry
     user = User.find_or_create_by(username: user_attributes[:email])
     user.update(user_attributes)
     session[:user_id] = user.id
+    session[:auth_token] = user.uid
     redirect_to users_dashboard_path(user.id)
   end
 
