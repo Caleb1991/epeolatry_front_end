@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :dashboard, only: [:show]
     resources :books
     resources :words
+    get '/words/:word', to: 'words#show'
   end
 end

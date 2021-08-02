@@ -9,14 +9,9 @@ RSpec.describe 'word index' do
       expect(page).to have_content("Quick Search")
       fill_in :word, with: "caterwaul"
       click_on "Search"
-      expect(current_path).to be(users_word_path)
-
+      expect(current_path).to eq('/users/words/:word')
+      save_and_open_page
+      expect(page).to have_content('caterwaul')
     end
-
-    #visit the uri that leads to form to fill out search
-    #fill in with caterwaul
-    #click button
-    #see caterwauls attributes
-    #see button asking if user wants to save word to list
   end
 end

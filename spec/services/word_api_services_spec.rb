@@ -9,8 +9,3 @@ RSpec.describe 'back_end word_api_service' do
     end
   end
 end
-
-
-
-
-# get 'https://epeolatry-back-end.herokuapp.com/words/search' do
