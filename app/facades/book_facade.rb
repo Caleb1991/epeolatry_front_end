@@ -10,9 +10,14 @@ class BookFacade
 
   def self.get_single_book(volume_id)
     json = BooksApiServices.get_a_book(volume_id)
-
-    json.map do |book|
-      Book.new(book_attributes)
+    
+    if json != ''
+      json.map do |book|
+        Book.new(book_attributes)
+      end
+    else
+      'No books were found.'
     end
   end
+  
 end
