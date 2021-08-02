@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def create
-    binding.pry
     user = User.find_or_create_by(username: user_attributes[:email])
     user.update(user_attributes)
     session[:user_id] = user.id
@@ -10,6 +9,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    session[:auth_token] = nil
     redirect_to root_path, message: "You Have Been Logged Out"
   end
 

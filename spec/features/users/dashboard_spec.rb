@@ -8,6 +8,7 @@ RSpec.describe 'As an authenticated user' do
     end
 
     it "displays user's e-mail" do
+      save_and_open_page
       expect(page).to have_content(@user.username)
     end
 

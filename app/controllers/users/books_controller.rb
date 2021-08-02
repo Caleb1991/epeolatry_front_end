@@ -1,10 +1,20 @@
 class Users::BooksController < ApplicationController
   def index
-    @books = BookFacade.get_all_books(session[:user_id], session[:auth_token], params[:filter])
+    @books = UserFacade.get_my_books(session[:auth_token], params[:filter])
   end
 
   def show
-    @book = BookFacade.get_single_book(sessions[:user_id], params[:id])
-    @words = WordFacade.get_words_for_given_book(sessions[:user_id], params[:id])
+    @book = BookFacade.get_single_book(params[:id])
+    # @words = WordFacade.get_words_for_given_book(sessions[:user_id], params[:id])
+  end
+
+  def create
+    response = UserFacade.add_book_response(params[:id], sessions[:auth_token])
+    flash[:notice] = response
+  end
+
+  def destroy
+    response = UserFacade.remove_book_response(params[:id], sessions[:auth_token])
+    flash[:notice] = response
   end
 end
