@@ -51,7 +51,7 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Take a Looksy</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -88,7 +88,7 @@ With Epeolatry, you can:
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Take a Looksy
 
 <strong>COMMENCE WITH CRANIUM EXPANSION HERE |</strong>
   [epeolatry](https://epeolatrys-rex.herokuapp.com)
