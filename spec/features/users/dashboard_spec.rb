@@ -7,21 +7,20 @@ RSpec.describe 'As an authenticated user' do
       visit users_dashboard_path(@user.uid)
     end
 
-    it "displays user's e-mail" do
-      save_and_open_page
-      expect(page).to have_content(@user.username)
-    end
+    # it "displays user's e-mail" do
+    #   expect(page).to have_content(@user.username)
+    # end
 
     # it 'displays word stats' do
     # end
 
-    it "displays link to user's book index" do
+    xit "displays link to user's book index" do
       expect(page).to have_button("My Beautiful Bevy of Books")
       click_button("My Beautiful Bevy of Books")
       expect(current_path).to eq(users_books_path(@user.id))
     end
 
-    it "displays link to user's word index" do
+    xit "displays link to user's word index" do
       expect(page).to have_button("My Wordly World of Words")
       click_button("My Wordly World of Words")
       expect(current_path).to eq(users_words_path(@user.id))
