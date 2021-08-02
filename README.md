@@ -88,53 +88,10 @@ With Epeolatry, you can:
 
 
 <!-- GETTING STARTED -->
-## Getting Started: PICK YOUR ADVENTURE
+## Getting Started
 
-<strong>FOR USER EXPERIENCE |</strong>
-Visit us on [Heroku](https://epeolatrys-rex.herokuapp.com).
-
-<strong>BEHIND THE CURTAIN OF OZ |</strong>
-For a more immersive, behind-the-scenes experience - visit us on [Local Host 3000](http://localhost:3000), following with steps below.
-
-### Prerequisites
-
-If you have chosen the THIS IS AMAZING/WHAT AM I LOOKING AT experience, and are running locally - follow the steps below:
-1. Fork and clone this repo
-2. Faraday install
-  ```sh
-  bundle exec faraday install
-  ```
-3. Setup database
-  ```sh
-  rails db:(drop,create,migrate)
-  ```
-4. Request Google Books API
-5. Include API Key in ENV
-  ```sh
-  config/application.yml
-  ```
-6. Spin up your rails server and skip on over to localhost
-  ```sh
-  rails s
-  ```
-
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+<strong>COMMENCE WITH CRANIUM EXPANSION HERE |</strong>
+  [epeolatry](https://epeolatrys-rex.herokuapp.com)
 
 
 <!-- USAGE EXAMPLES -->
