@@ -1,6 +1,6 @@
-class WordServices
+class WordApiServices
   def self.search(word)
-    response = Faraday.get("https://epeolatry-back-end.herokuapp.com/words/search?q=#{word}")
+    response = Faraday.get("https://epeolatry-back-end.herokuapp.com/api/v1/word/search?q=#{word}")
 
     JSON.parse(response.body, symbolize_names: true)
   end

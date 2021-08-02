@@ -1,7 +1,7 @@
 class WordFacade
 
   def self.search(word)
-    attributes = WordServices.search(word)
+    attributes = WordApiServices.search(word)
     attributes.map do |attribute|
       test = WordPoro.new(attribute[1][:attributes])
     end

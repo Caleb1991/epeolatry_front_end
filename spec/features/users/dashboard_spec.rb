@@ -1,5 +1,6 @@
 require 'rails_helper'
 RSpec.describe 'As an authenticated user' do
+
   describe 'Reader Dashboard' do
     before :each do
       @user = User.create!(username: 'Bob@Boberton.bobmail.com', access_token: 'token', uid: 'thisismyid')
