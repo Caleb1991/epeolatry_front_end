@@ -84,7 +84,7 @@ With Epeolatry, you can:
 ### Built With
 
 * [Ruby on Rails | v5.2.6](https://rubyonrails.org/)
-* [Bootstrap | VERSION HERE?](https://getbootstrap.com)
+* [Bootstrap](https://getbootstrap.com)
 
 
 <!-- GETTING STARTED -->
