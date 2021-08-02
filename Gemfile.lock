@@ -146,6 +146,8 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     nio4r (2.5.7)
+    nokogiri (1.11.7-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.11.7-x86_64-linux)
@@ -295,6 +297,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  arm64-darwin-20
   x86_64-darwin-19
   x86_64-darwin-20
   x86_64-linux
