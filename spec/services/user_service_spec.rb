@@ -1,5 +1,5 @@
 require 'rails_helper'
-z
+
 RSpec.describe UserApiServices do
   before :each do
     VCR.turn_on!
@@ -15,7 +15,7 @@ RSpec.describe UserApiServices do
         expect(actual[0].title).to eq('tim')
       end
     end
-    
+
     describe '.add_a_book' do
       xit 'adds a book to a users shelf' do
         VCR.use_cassette 'add_a_book' do

@@ -9,4 +9,15 @@ RSpec.describe 'word Facade' do
       expect(result.word).to eq('caterwaul')
     end
   end
+  describe 'users words' do
+    it 'can find all users words' do
+      VCR.use_cassette 'users words' do
+        user_id = 12
+        result = WordFacade.all_users_words(user_id)
+
+        epect(result.word).to eq('sad')
+      end
+
+    end
+  end
 end

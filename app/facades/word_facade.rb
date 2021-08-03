@@ -7,8 +7,8 @@ class WordFacade
     end
   end
 
-  def self.get_all_users_words(user_id)
-    json = WordsApiServices.get_users_words(user_id)
+  def self.all_users_words(user_id)
+    json = WordApiServices.users_words(user_id)
 
     words = json.map do |word_attributes|
       Word.new(word_attributes)
@@ -17,7 +17,7 @@ class WordFacade
     #perhaps to work around the last method we can send over the joins in this package
   end
 
-  def self.get_one_user_word(user_id, word_id)
+  def self.one_user_word(user_id, word_id)
     json = WordsApiServices.get_users_words(user_id)
 
     word_attributes = json.find do |word_atributes|

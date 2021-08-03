@@ -1,6 +1,6 @@
 class Users::WordsController < ApplicationController
   def index
-    @user = User.find_by(params[:uid])
+    #make service call to back end to find users words
     # @words = @user.words.all
   end
 
@@ -8,8 +8,7 @@ class Users::WordsController < ApplicationController
     if params[:word]
       @word = WordFacade.search(params[:word]).first #why is that like that?
     else
-      @user = User.find_by(params[:uid])
-      @word = user.words.find_by(params[:word])
+      @word = current_user.words.find_by(params[:word])
     end
   end
 

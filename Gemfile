@@ -42,20 +42,15 @@ gem 'bootstrap', '~> 5.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara'
   gem 'figaro'
   gem 'pry'
-<<<<<<< HEAD
   gem 'faker'
-
-=======
   gem 'webmock'
   gem 'vcr'
->>>>>>> a28b0f9ca6ba84bf5bc7468068820ec2d3bc03d6
 end
 
 group :development do
