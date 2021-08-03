@@ -6,9 +6,9 @@ RSpec.describe UserApiServices do
   end
   describe 'class methods' do
     describe '.get_users_books' do
-      xit 'returns all of a users books' do
+      it 'returns all of a users books' do
         VCR.use_cassette 'user_books_law' do
-          actual = UserApiServices.get_users_books('ya29.a0ARrdaM8WC4useAAdeg3v5qEAX_cVidzPSmmn3cjKhoqv5ugfer1cYPh49P96rgJDhFWarfS_XfD9dBhjzp_BkfRxphOfsPBuFRyTqoZ5klY1tNGUtHLVSiaSagYi5wvIcM6ln64sKZztR3ZHbgp4YVBK1nc5ydh')
+          actual = UserApiServices.get_users_books('ya29.a0ARrdaM8awP7ia9xOT7kBRYtvt-6SguYe-bnj6nbugUrwaRA_-mpiqI4MOWLfOL0OLVj6R--3UmXyM8ml6HBwtr1F9kH99HaV4ACIp9mOc74Hj2A8d2aJ8-Qytx3nrd39Ny6_v-0jZVgFu5daon7SwmY6kGvWHw')
         end
 
         expect(actual.class).to eq(array)
@@ -19,7 +19,7 @@ RSpec.describe UserApiServices do
     describe '.add_a_book' do
       xit 'adds a book to a users shelf' do
         VCR.use_cassette 'add_a_book' do
-          actual = UserApiServices.add_a_book('B4d1swEACAAJ', 'auth_token')
+          actual = UserApiServices.add_a_book('B4d1swEACAAJ', 'ya29.a0ARrdaM8awP7ia9xOT7kBRYtvt-6SguYe-bnj6nbugUrwaRA_-mpiqI4MOWLfOL0OLVj6R--3UmXyM8ml6HBwtr1F9kH99HaV4ACIp9mOc74Hj2A8d2aJ8-Qytx3nrd39Ny6_v-0jZVgFu5daon7SwmY6kGvWHw')
         end
 
         expect(actual.status).to eq(200)
@@ -29,7 +29,7 @@ RSpec.describe UserApiServices do
     describe '.delete_a_book' do
       xit 'deletes a book to a users shelf' do
         VCR.use_cassette 'remove_a_book' do
-          actual = UserApiServices.remove_a_book('B4d1swEACAAJ', 'auth_token', '2')
+          actual = UserApiServices.remove_a_book('B4d1swEACAAJ', 'ya29.a0ARrdaM8awP7ia9xOT7kBRYtvt-6SguYe-bnj6nbugUrwaRA_-mpiqI4MOWLfOL0OLVj6R--3UmXyM8ml6HBwtr1F9kH99HaV4ACIp9mOc74Hj2A8d2aJ8-Qytx3nrd39Ny6_v-0jZVgFu5daon7SwmY6kGvWHw', '2')
         end
 
         expect(actual.status).to eq(200)

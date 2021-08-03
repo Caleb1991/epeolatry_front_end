@@ -1,6 +1,6 @@
 class UserFacade
   
-  def self.get_my_books(auth_token)
+  def self.get_my_books(auth_token, filter = nil)
     json = UserApiServices.get_users_books(auth_token, filter = nil)
 
     json.map do |book_attributes|
