@@ -10,8 +10,8 @@ RSpec.describe 'word show' do
       click_on "Search"
       expect(current_path).to eq('/users/words/:word')
       expect(page).to have_content('caterwaul')
-      expect(page).to have_button('Save Word')
-      click_on 'Save Word'
+      # expect(page).to have_button('Save Word')
+      # click_on 'Save Word'
     end
 
   #this show test asks for a button that only needs to exist if we have a separate button that links the found word to a book manually
