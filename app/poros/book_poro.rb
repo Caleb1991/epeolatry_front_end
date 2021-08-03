@@ -1,16 +1,17 @@
 class BookPoro
   attr_reader :title,
-              :author,
-              :genre,
+              :authors,
+              :genres,
               :summary,
+              :shelves,
               :id
 
-  def initialize(json)
-    @title = json
-    @author = json
-    @genre = json
-    @summary = json
-    @id = json
-    #will need to acces the key of the json response for each attribute
+  def initialize(attributes)
+      @title = attributes[:title]
+      @authors = attributes[:authors]
+      @genres = attributes[:genres]
+      @summary = attributes[:description]
+      @id = attributes[:id]
+      @shelves = attributes[:shelves]
   end
 end
