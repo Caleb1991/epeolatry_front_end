@@ -49,8 +49,13 @@ group :development, :test do
   gem 'capybara'
   gem 'figaro'
   gem 'pry'
+<<<<<<< HEAD
   gem 'faker'
 
+=======
+  gem 'webmock'
+  gem 'vcr'
+>>>>>>> a28b0f9ca6ba84bf5bc7468068820ec2d3bc03d6
 end
 
 group :development do

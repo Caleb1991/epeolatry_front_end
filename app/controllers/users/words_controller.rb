@@ -12,4 +12,9 @@ class Users::WordsController < ApplicationController
       @word = user.words.find_by(params[:word])
     end
   end
+
+  def create
+    response = UserFacade.create_glossary_response(params[:word], params[:book_id], session[:user_id])
+    flash[:notice] = response
+  end
 end
