@@ -1,11 +1,5 @@
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -22,13 +16,10 @@
     <img src="https://user-images.githubusercontent.com/72179421/127752084-8fdb65d3-222d-4daa-a608-4a612440156a.jpg">
   </a>
 
-  <h3 align="center">- E P E O L A T R Y -</h3>
+  <h3 align="center">e . p . e . o . l . a . t . r . y</h3>
 
   <p align="center">
     an app to catalog your literary and vernacular journey. <br> propelling your pronunciation prowess of perplexing prose <br> <em>epi...olive...uh...tree?</em> --> <strong>epeolatry</strong> <br>
-    <br />
-    <a href="READMEDOCSLINK"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="DEMOLINKHERE">View Demo</a>
     ·
@@ -42,7 +33,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Compendium of Contents</summary>
+  <summary>Table of Contents | Compendium of Content</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -50,19 +41,17 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#take-a-looksy">Take a Looksy</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#contribute">Contribute</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project | <em>project precis</em>
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -74,37 +63,36 @@ With Epeolatry, you can:
 - Save the word under the book you’re reading
 
 
-### Built With
+### Built With | <em>constructed using</em>
 
 * [Ruby on Rails | v5.2.6](https://rubyonrails.org/)
 * [Bootstrap](https://getbootstrap.com)
 
 
 <!-- GETTING STARTED -->
-## Take a Looksy
+## Getting Started | <em>to commence</em>
 
-<strong>COMMENCE WITH CRANIUM EXPANSION HERE |</strong>
-  [epeolatry](https://epeolatrys-rex.herokuapp.com)
+<strong>Commence Cranium and Concordance Expansion Now... on [HEROKU](https://epeolatrys-rex.herokuapp.com)
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- USAGE -->
+## Usage | <em>utilization</em>
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+xxxxxxxxxxx TO BE COMPLETED xxxxxxxxxxxx
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Roadmap | <em>planned route</em>
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Caleb1991/epeolatry_front_end/issues) for a list of proposed features (and known issues).
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contribute | <em>impart</em>
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -115,27 +103,13 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[contributors-shield]: https://img.shields.io/github/contributors/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
+[contributors-url]: https://github.com/Caleb1991/epeolatry_front_end/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
+[forks-url]: https://github.com/Caleb1991/epeolatry_front_end/network/members
+[stars-shield]: https://img.shields.io/github/stars/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
+[stars-url]: https://github.com/Caleb1991/epeolatry_front_end/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
+[issues-url]: https://github.com/Caleb1991/epeolatry_front_end/issues
 [product-screenshot]: images/screenshot.png
