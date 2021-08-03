@@ -1,17 +1,22 @@
-class WordsApiServices
-  def self.get_users_words(user_id, page_number)
-    response = Faraday.get('') do |req|
-      req.params[''] = user_id
-      req.params[''] = page_number
+class WordApiServices
+  def self.search(word)
+    response = Faraday.get("https://epeolatry-back-end.herokuapp.com/api/v1/word/search?q=#{word}")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.users_words(user_id)
+    response = Faraday.get('https://epeolatry-back-end.herokuapp.com/api/v1/user/words') do |req|
+      req.params[:user_id] = user_id
       #another placeholder, may become unneccessary
     end
 
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.get_words_for_single_book(user_id, book_id, page_number)
+  def self.get_words_for_single_book(user_id, book_id)
     response = Faraday.get('') do |req|
-      req.params[''] = user_id
+      req.params[:user_id] = user_id
       req.params[''] = book_id
       req.params[''] = page_number
     end

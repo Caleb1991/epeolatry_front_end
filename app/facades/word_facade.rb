@@ -1,16 +1,20 @@
 class WordFacade
-
-  def self.get_all_users_words(user_id)
-    json = WordsApiServices.get_users_words(user_id)
-
-    words = json.map do |word_attributes|
-      Word.new(word_attributes)
+  def self.search(word)
+    attributes = WordApiServices.search(word)
+    attributes.map do |attribute|
+      WordPoro.new(attribute[1][:attributes])
     end
-    #same as books, hoping this is a good start, but may need retooling
-    #perhaps to work around the last method we can send over the joins in this package
+  end
+#the above and below methods work almost identically. I, Alex, left the two diff syntax for educational purposes.
+
+  def self.all_users_words(user_id)
+    attributes = WordApiServices.users_words(user_id)[:data]
+    attributes.map do |attributes|
+      WordPoro.new(attributes[:attributes])
+    end[0]
   end
 
-  def self.get_one_user_word(user_id, word_id)
+  def self.one_user_word(user_id, word_id)
     json = WordsApiServices.get_users_words(user_id)
 
     word_attributes = json.find do |word_atributes|

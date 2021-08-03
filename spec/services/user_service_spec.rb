@@ -15,8 +15,6 @@ RSpec.describe UserApiServices do
         expect(@actual[:data][0][:attributes][:title]).to eq('The Three-Body Problem')
       end
     end
-    
-    
   end
   
   describe '.add_a_book' do
