@@ -1,6 +1,6 @@
 class Users::BooksController < ApplicationController
   def index
-    @books = UserFacade.get_my_books(session[:auth_token], params[:filter])
+    @books = UserFacade.get_my_books(session[:auth_token])
   end
 
   def show

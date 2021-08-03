@@ -1,10 +1,9 @@
 class UserApiServices
-  def self.get_users_books(auth_token, filter = nil)
+  def self.get_users_books(auth_token)
     response = conn.get('api/v1/user/books') do |req|
-      req.params[:filter] = filter
       req.params[:auth_token] = auth_token
     end
-    binding.pry
+    # binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -19,8 +18,7 @@ class UserApiServices
   end
 
   def self.remove_a_book(volume_id, auth_token, shelf_id)
-    response = conn.delete "/api/v1/user/books" do |req|
-      req.params[:volume_id] = volume_id
+    response = conn.delete "/api/v1/user/books/#{volume_id}" do |req|
       req.params[:auth_token] = auth_token
       req.params[:shelf_id] = shelf_id
     end

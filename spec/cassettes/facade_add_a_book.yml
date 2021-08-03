@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://epeolatry-back-end.herokuapp.com/api/v1/user/books?auth_token=ya29.a0ARrdaM-vu2sw0V27N15VulFkM9EH0AciH_l9TeZan0Zw8wVezLWaW81KHj_Y4Y8tdCZP2m0crX6spLCbxbS1gyyQ4qkQ7BI_bg4U1lAiMkvzZoUQxjwPuVV6uCMxa37sqCBT0EndhXWvjFKedg76jD4oifl58A&shelf_id=2&volume_id=B4d1swEACAAJ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.5.1
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 03 Aug 2021 02:48:38 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 101f910d-e5d3-463c-87ed-d49de1c3c6ef
+      X-Runtime:
+      - '0.129934'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 03 Aug 2021 02:48:38 GMT
+recorded_with: VCR 6.0.0
