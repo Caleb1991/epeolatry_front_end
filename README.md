@@ -46,8 +46,9 @@
 </details>
 
 
-
+<a id="about-the-project">
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project | <em>project precis</em>
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -58,47 +59,57 @@ With Epeolatry, you can:
 - Track the books you’re reading or have read
 - Look up the definition of a word you don’t know while reading a book 
 - Save the word under the book you’re reading
+</a>
 
-
-### Built With | <em>constructed using</em>
+<a id="built-with">
+<!-- BUILT WITH -->
+  
+## Built With | <em>constructed using</em>
 
 * [Ruby on Rails | v5.2.6](https://rubyonrails.org/)
 * [Bootstrap | v5.0.1](https://getbootstrap.com)
+</a>
 
-
+<a id="getting-started">
 <!-- GETTING STARTED -->
+  
 ## Getting Started | <em>to commence</em>
 
-<strong>Commence Cranium and Concordance Expansion Now... on [HEROKU](https://epeolatrys-rex.herokuapp.com)
+Commence Cranium and Concordance Expansion Now... on [HEROKU](https://epeolatrys-rex.herokuapp.com)
+</a>
 
-
+<a id="usage">
 <!-- USAGE -->
+  
 ## Usage | <em>utilization</em>
 
 xxxxxxxxxxx TO BE COMPLETED xxxxxxxxxxxx
 
 _For more examples, please refer to the [Documentation](https://example.com)_
+</a>
 
-
-
+<a id="roadmap">
 <!-- ROADMAP -->
+  
 ## Roadmap | <em>planned route</em>
 
 See the open [issues](https://github.com/Caleb1991/epeolatry_front_end/issues) for a list of proposed features (and known issues).
+</a>
 
 
-
-<!-- CONTRIBUTING -->
+<a id="contribute">
+<!-- CONTRIBUTE -->
+  
 ## Contribute | <em>impart</em>
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
+Did our shmorgishborg of sayings, sentences, synonyms and sesquipedalians inspire a great idea for add-ons? Did you have that, "I'd really like to see THIS" moment while using the app? Feel free to share!
+  
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
+</a>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
