@@ -1,17 +1,26 @@
 class BooksApiServices
-  def get_users_books(user_id)
-    response = Faraday.get('heroku_jdgngskjdnfik/bookshelves') do |req|
-      req.params['user_id'] = user_id
+  def self.get_search_books(search)
+    Rails.cache.fetch("#{search}_book_search", expires_in: 6.hours) do
+      response = conn.get('/api/v1/book/search') do |req|
+        req.params[:search] = search
+      end
+      
+      JSON.parse(response.body, symbolize_names: true)
     end
-    #place holders here, may be unneccesary but wanted to have it good to go in the event it is neccessary
+  end
 
+  def self.get_a_book(volume_id)
+    response = conn.get('/api/v1/book/search') do |req|
+      req.params[:volume_id] = volume_id
+    end
+    
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.get_users_books_with_title_filter(user_id, title_params)
-    response = Faraday.get('heroku_jdgngskjdnfik/bookshelves') do |req|
-      req.params['user_id'] = user_id
-      req.params['title_filter'] = title_params
+  private
+
+  def self.conn
+    Faraday.new(url: 'https://epeolatry-back-end.herokuapp.com') do |faraday|
     end
   end
 end

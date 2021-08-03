@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://epeolatry-back-end.herokuapp.com/api/v1/user/books?auth_token=ya29.a0ARrdaM-vu2sw0V27N15VulFkM9EH0AciH_l9TeZan0Zw8wVezLWaW81KHj_Y4Y8tdCZP2m0crX6spLCbxbS1gyyQ4qkQ7BI_bg4U1lAiMkvzZoUQxjwPuVV6uCMxa37sqCBT0EndhXWvjFKedg76jD4oifl58A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.5.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 03 Aug 2021 02:44:21 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"160f54706eed36446575d83121f62bce"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '00019d46-9295-495d-8e28-131983728d1f'
+      X-Runtime:
+      - '0.654856'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbeyJpZCI6IlpyTnpBd0FBUUJBSiIsInR5cGUiOiJib29rX2FuZF9zaGVsZiIsImF0dHJpYnV0ZXMiOnsidGl0bGUiOiJUaGUgVGhyZWUtQm9keSBQcm9ibGVtIiwiYXV0aG9ycyI6WyJDaXhpbiBMaXUiXSwiZ2VucmVzIjpbIkZpY3Rpb24iXSwiZGVzY3JpcHRpb24iOiJTb29uIHRvIGJlIGEgTmV0ZmxpeCBPcmlnaW5hbCBTZXJpZXMhIOKAnFdhciBvZiB0aGUgV29ybGRzIGZvciB0aGUgMjFzdCBjZW50dXJ5LuKAnSDigJMgV2FsbCBTdHJlZXQgSm91cm5hbCBUaGUgVGhyZWUtQm9keSBQcm9ibGVtIGlzIHRoZSBmaXJzdCBjaGFuY2UgZm9yIEVuZ2xpc2gtc3BlYWtpbmcgcmVhZGVycyB0byBleHBlcmllbmNlIHRoZSBIdWdvIEF3YXJkLXdpbm5pbmcgcGhlbm9tZW5vbiBmcm9tIENoaW5hJ3MgbW9zdCAuLi4iLCJzaGVsdmVzIjpbIlJlYWRpbmcgbm93Il19fSx7ImlkIjoiUENjT01iRXlkQUlDIiwidHlwZSI6ImJvb2tfYW5kX3NoZWxmIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IkxpbGl0aCdzIEJyb29kIiwiYXV0aG9ycyI6WyJPY3RhdmlhIEUuIEJ1dGxlciJdLCJnZW5yZXMiOlsiRmljdGlvbiJdLCJkZXNjcmlwdGlvbiI6IlRoZSBjb21wbGV0ZSBzZXJpZXMgYWJvdXQgYW4gYWxpZW4gc3BlY2llcyB0aGF0IGNvdWxkIHNhdmUgaHVtYW5pdHkgYWZ0ZXIgbnVjbGVhciBhcG9jYWx5cHNl4oCUb3IgZGVzdHJveSBpdOKAlGZyb20g4oCcb25lIG9mIHNjaWVuY2UgZmljdGlvbuKAmXMgZmluZXN0IHdyaXRlcnPigJ0gKFRoZSBOZXcgWW9yayBUaW1lcykuIFRoZSBuZXdlc3Qgc3RhZ2UgaW4gaHVtYW4gZXZvbHV0aW9uIGJlZ2lucyBpbiBvdXRlciBzcGFjZS4gU3Vydml2b3JzIC4uLiIsInNoZWx2ZXMiOlsiUmVhZGluZyBub3ciXX19LHsiaWQiOiI4dGhNTGthaGdnY0MiLCJ0eXBlIjoiYm9va19hbmRfc2hlbGYiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiUGFyYWJsZSBvZiB0aGUgU293ZXIiLCJhdXRob3JzIjpbIk9jdGF2aWEgRS4gQnV0bGVyIl0sImdlbnJlcyI6WyJGaWN0aW9uIl0sImRlc2NyaXB0aW9uIjoiQSBOZXcgWW9yayBUaW1lcyBOb3RhYmxlIEJvb2s6IEluIDIwMjUsIHdpdGggdGhlIHdvcmxkIGRlc2NlbmRpbmcgaW50byBtYWRuZXNzIGFuZCBhbmFyY2h5LCBvbmUgd29tYW4gYmVnaW5zIGEgZmF0ZWZ1bCBqb3VybmV5IHRvd2FyZCBhIGJldHRlciBmdXR1cmUuIOKAnEEgc3R1bm5lci7igJ0g4oCURmxlYSwgbXVzaWNpYW4gYW5kIGFjdG9yLCBUaGVXYWxsIFN0cmVldCBKb3VybmFsIExhdXJlbiBPbGFtaW5hIGFuZCBoZXIgZmFtaWx5IC4uLiIsInNoZWx2ZXMiOlsiUmVhZGluZyBub3ciLCJIYXZlIHJlYWQiXX19LHsiaWQiOiJ5cllVdmdBQUNBQUoiLCJ0eXBlIjoiYm9va19hbmRfc2hlbGYiLCJhdHRyaWJ1dGVzIjp7InRpdGxlIjoiQWxsIFlvdSBOZWVkIElzIEtpbGwiLCJhdXRob3JzIjpbIkhpcm9zaGkgU2FrdXJhemFrYSJdLCJnZW5yZXMiOlsiRmljdGlvbiJdLCJkZXNjcmlwdGlvbiI6IldoZW4gdGhlIGFsaWVuIE1pbWljcyBpbnZhZGUsIEtlaWppIEtpcml5YSBpcyBqdXN0IG9uZSBvZiBtYW55IHJlY3J1aXRzIHNob3ZlZCBpbnRvIGEgc3VpdCBvZiBiYXR0bGUgYXJtb3IgY2FsbGVkIGEgSmFja2V0IGFuZCBzZW50IG91dCB0byBraWxsLiBLZWlqaSBkaWVzIG9uIHRoZSBiYXR0bGVmaWVsZCwgb25seSB0byBiZSByZWJvcm4gZWFjaCBtb3JuaW5nIHRvIGZpZ2h0IGFuZCBkaWUgYWdhaW4gYW5kIGFnYWluLiBPbiAuLi4iLCJzaGVsdmVzIjpbIlJlYWRpbmcgbm93Il19fSx7ImlkIjoiaW5Zczc5Z1Y0VVFDIiwidHlwZSI6ImJvb2tfYW5kX3NoZWxmIiwiYXR0cmlidXRlcyI6eyJ0aXRsZSI6IlNub3cgQ3Jhc2giLCJhdXRob3JzIjpbIk5lYWwgU3RlcGhlbnNvbiJdLCJnZW5yZXMiOlsiRmljdGlvbiJdLCJkZXNjcmlwdGlvbiI6IlwiVGhpcyBTbm93IENyYXNoIHRoaW5nLS1pcyBpdCBhIHZpcnVzLCBhIGRydWcsIG9yIGEgcmVsaWdpb24/XCIgSnVhbml0YSBzaHJ1Z3MuIFwiV2hhdCdzIHRoZSBkaWZmZXJlbmNlP1wiIFRoZSBvbmx5IHJlbGllZiBmcm9tIHRoZSBzZWEgb2YgbG9nb3MgaXMgd2l0aGluIHRoZSB3ZWxsLWd1YXJkZWQgYm9yZGVycyBvZiB0aGUgQnVyYmNsYXZlcy4gSXMgaXQgYW55IHdvbmRlciB0aGF0IG1vc3Qgc2FuZSBmb2xrcyBoYXZlIC4uLiIsInNoZWx2ZXMiOlsiSGF2ZSByZWFkIl19fV19
+  recorded_at: Tue, 03 Aug 2021 02:44:21 GMT
+recorded_with: VCR 6.0.0
