@@ -12,7 +12,7 @@ RSpec.describe BooksApiServices do
         end
 
         expect(@actual[:data].class).to eq(Array)
-        expect(@actual[:data][0][:attributes][:title]).to eq('Tools of Titans')
+        expect(@actual[:data][0][:attributes][:title]).to eq('The Master Switch')
       end
     end
     describe '.get_a_book' do
