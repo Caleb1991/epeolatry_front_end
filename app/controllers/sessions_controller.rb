@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    user = User.find_or_create_by(username: user_attributes[:email])
+    user = User.find_or_create_by(username: auth_hash['info']['email'])
     user.update(user_attributes)
     session[:user_id] = user.id
     redirect_to users_dashboard_path(user.id)
