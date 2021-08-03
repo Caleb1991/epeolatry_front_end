@@ -3,7 +3,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Roadmap][roadmap-shield]][roadmap-url]
+[![Issues][issues-shield]][issues-url]
 
 
 <!-- PROJECT LOGO -->
@@ -84,7 +84,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap | <em>planned route</em>
 
-See the [open issues](https://github.com/Caleb1991/epeolatry_front_end/issues) for a list of proposed features (and known issues).
+See the open [issues](https://github.com/Caleb1991/epeolatry_front_end/issues) for a list of proposed features (and known issues).
 
 
 
@@ -107,6 +107,6 @@ Contributions are what make the open source community such an amazing place to b
 [forks-url]: https://github.com/Caleb1991/epeolatry_front_end/network/members
 [stars-shield]: https://img.shields.io/github/stars/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
 [stars-url]: https://github.com/Caleb1991/epeolatry_front_end/stargazers
-[roadmap-shield]: https://img.shields.io/github/issues/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
-[roadmap-url]: https://github.com/Caleb1991/epeolatry_front_end/issues
+[issues-shield]: https://img.shields.io/github/issues/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
+[issues-url]: https://github.com/Caleb1991/epeolatry_front_end/issues
 [product-screenshot]: images/screenshot.png
