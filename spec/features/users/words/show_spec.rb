@@ -10,15 +10,10 @@ RSpec.describe 'word show' do
       click_on "Search"
       expect(current_path).to eq('/users/words/:word')
       expect(page).to have_content('caterwaul')
-      save_and_open_page
       expect(page).to have_button('Save Word')
       click_on 'Save Word'
     end
 
-    #visit the uri that leads to form to fill out search
-    #fill in with caterwaul
-    #click button
-    #see caterwauls attributes
-    #see button asking if user wants to save word to list
+  #this show test asks for a button that only needs to exist if we have a separate button that links the found word to a book manually
   end
 end

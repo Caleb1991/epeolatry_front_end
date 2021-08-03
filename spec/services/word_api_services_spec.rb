@@ -13,8 +13,7 @@ RSpec.describe 'back_end word_api_service' do
       VCR.use_cassette 'users words' do
 
       result = WordApiServices.users_words(12)
-      require "pry"; binding.pry
-      expect(result.count).to eq(9)
+      expect(result.count).to eq(1)
       end
     end
   end
