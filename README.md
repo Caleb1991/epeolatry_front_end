@@ -3,7 +3,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Roadmap][roadmap-shield]][roadmap-url]
 
 
 <!-- PROJECT LOGO -->
@@ -63,7 +63,7 @@ With Epeolatry, you can:
 ### Built With | <em>constructed using</em>
 
 * [Ruby on Rails | v5.2.6](https://rubyonrails.org/)
-* [Bootstrap](https://getbootstrap.com)
+* [Bootstrap | v5.0.1](https://getbootstrap.com)
 
 
 <!-- GETTING STARTED -->
@@ -107,6 +107,6 @@ Contributions are what make the open source community such an amazing place to b
 [forks-url]: https://github.com/Caleb1991/epeolatry_front_end/network/members
 [stars-shield]: https://img.shields.io/github/stars/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
 [stars-url]: https://github.com/Caleb1991/epeolatry_front_end/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
-[issues-url]: https://github.com/Caleb1991/epeolatry_front_end/issues
+[roadmap-shield]: https://img.shields.io/github/issues/Caleb1991/epeolatry_front_end.svg?style=for-the-badge
+[roadmap-url]: https://github.com/Caleb1991/epeolatry_front_end/issues
 [product-screenshot]: images/screenshot.png
