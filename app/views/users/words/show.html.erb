@@ -1,1 +1,9 @@
-<%= @word %>
+<h1><%= @word.word %></h1>
+<h3><%= @word.part_of_speech %></h3>
+<h3><%= @word.phonetic %></h3>
+<h3><%= @word.phonetic_link %></h3> make this a link!
+<h3><%= @word.definition %></h3>
+<h3><%= @word.example %></h3>
+    <% @word.synonyms.split(' ').each do |synonym| %>
+      <h3><%= synonym %></h3>
+    <% end %>

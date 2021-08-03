@@ -10,6 +10,7 @@ RSpec.describe 'word show' do
       click_on "Search"
       expect(current_path).to eq('/users/words/:word')
       expect(page).to have_content('caterwaul')
+      save_and_open_page
       expect(page).to have_button('Save Word')
       click_on 'Save Word'
     end

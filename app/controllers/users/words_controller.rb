@@ -6,7 +6,7 @@ class Users::WordsController < ApplicationController
 
   def show
     if params[:word]
-      @word = WordFacade.search(params[:word]).first
+      @word = WordFacade.search(params[:word]).first #why is that like that?
     else
       @user = User.find_by(params[:uid])
       @word = user.words.find_by(params[:word])

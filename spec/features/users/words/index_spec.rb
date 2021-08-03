@@ -10,7 +10,6 @@ RSpec.describe 'word index' do
       fill_in :word, with: "caterwaul"
       click_on "Search"
       expect(current_path).to eq('/users/words/:word')
-      save_and_open_page
       expect(page).to have_content('caterwaul')
     end
   end
