@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-# TODO: Add serach bar test + functionality for word search
-
 RSpec.describe 'Book show page' do
   before :each do
     @user = User.create!(username: 'Bob@Boberton.bobmail.com', access_token: 'token', uid: 'thisismyid')
@@ -47,14 +45,29 @@ RSpec.describe 'Book show page' do
       expect(page).to have_link("Photographic", :href=>"/user/books/#{@book_id}/word/Photographic")
     end
 
-    xit 'has a functional search bar to look up a word for that book' do
+    it 'has a functional search bar to look up a word for that book' do
       mock_return = File.open('./spec/fixtures/book_show_in_lib_no_words_fixture.json')
       stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
         .to_return(status: 200, body: mock_return, headers: {})
 
       expect(page).to have_field("Lookup a word")
+
+      fill_in "Lookup a word", with: "caterwaul"
+      click_button("Search")
+
+      expect(page).to have_current_path(user_book_path(@book_id))
+      expect(page).to have_link("caterwaul", :href => "/user/books/#{@book_id}/word/caterwaul  ")
+
+      expect(page).to have_field("Lookup a word")
+      expect(page).to have_content("The Sparrow")
+      expect(page).to have_content("Mary Doria Russell")
+      expect(page).to have_content("Fiction")
+      expect(page).to have_content("A visionary work")
+      expect(page).to have_content("To Read")
+      expect(page).to have_content("Currently Reading")
     end
   end
+
 
   describe 'for a book not in the reader\'s library' do
     it 'shows the books key information' do
@@ -101,7 +114,7 @@ RSpec.describe 'Book show page' do
       expect(page).to have_content("To Read")
       expect(page).to have_content("Your Words for")
       expect(page).to have_content("No words looked up yet!")
-      # expect(page).to have_field("Lookup a word")
+      expect(page).to have_field("Lookup a word")
     end
   end
 end
