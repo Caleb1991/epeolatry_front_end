@@ -50,15 +50,21 @@ RSpec.describe 'Book show page' do
       stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
         .to_return(status: 200, body: mock_return, headers: {})
 
-      expect(page).to have_field("Lookup a word")
+      word = 'caterwaul'
+      mock_word_return = File.open('./spec/fixtures/word_caterwaul_fixture.json')
+      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/word/search?q=#{word}")
+        .to_return(status: 200, body: mock_word_return, headers: {})
 
-      fill_in "Lookup a word", with: "caterwaul"
+      visit user_book_path(@book_id)
+      expect(page).to have_field(:query)
+
+      fill_in :query, with: word
       click_button("Search")
 
-      expect(page).to have_current_path(user_book_path(@book_id))
-      expect(page).to have_link("caterwaul", :href => "/user/books/#{@book_id}/word/caterwaul  ")
+      expect(page).to have_current_path("/user/books/#{@book_id}?word_search=#{word}")
+      expect(page).to have_link(word, :href => "/user/books/#{@book_id}/word/#{word}")
 
-      expect(page).to have_field("Lookup a word")
+      expect(page).to have_field(:query)
       expect(page).to have_content("The Sparrow")
       expect(page).to have_content("Mary Doria Russell")
       expect(page).to have_content("Fiction")
@@ -114,7 +120,7 @@ RSpec.describe 'Book show page' do
       expect(page).to have_content("To Read")
       expect(page).to have_content("Your Words for")
       expect(page).to have_content("No words looked up yet!")
-      expect(page).to have_field("Lookup a word")
+      expect(page).to have_field(:query)
     end
   end
 end

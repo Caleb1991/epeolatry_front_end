@@ -9,6 +9,7 @@ class User::BooksController < ApplicationController
     book_and_words = BookFacade.get_single_book(params[:id], user_id, auth_token)
     @book = book_and_words[:book]
     @words = book_and_words[:words]
+    @searched_word = params[:word_search]
   end
 
   def create

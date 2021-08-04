@@ -19,6 +19,20 @@
     <%= shelf %>
   <% end %>
 
+  <br>
+
+  <h3>Lookup a Word</h3>
+  <%= form_with url: user_book_word_search_path(@book.id), method: :get, local: true do |f| %>
+    <%= f.label :query, "Lookup a Word" %>
+    <%= f.text_field :query %><br><br>
+    <%= f.submit("Search") %>
+  <% end %>
+
+  <% if !@searched_word.nil? %>
+    <h3>Word Search Results:</h3>
+    <%= link_to @searched_word, "/user/books/#{@book.id}/word/#{@searched_word}" %>
+  <% end %>
+
   <h3>Your Words for <%= @book.title %></h3>
   <% if !@words.first.nil? %>
     <% @words.each do |word| %>

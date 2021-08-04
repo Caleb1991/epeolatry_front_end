@@ -6,4 +6,15 @@ class User::Books::WordController < ApplicationController
       @word = current_user.words.find_by(params[:word])
     end
   end
+
+  def search
+    response = WordFacade.search(params[:query])
+    if response != ''
+      @word = response.first
+      redirect_to "/user/books/#{params[:book_id]}?word_search=#{@word.word}"
+    else
+      flash[:errpr] = "Word not found"
+      redirect_to "/user/books/#{params[:book_id]}"
+    end
+  end
 end
