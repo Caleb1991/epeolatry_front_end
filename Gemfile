@@ -44,7 +44,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug'
   gem 'capybara'
   gem 'figaro'
   gem 'pry'
@@ -67,8 +67,6 @@ group :test do
   gem 'simplecov'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
-  gem 'webmock'
-  gem 'vcr'
   gem 'database_cleaner-active_record'
 end
 
