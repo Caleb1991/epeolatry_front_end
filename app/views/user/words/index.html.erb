@@ -1,1 +1,37 @@
+        <style>
+            div.gfg {
+                margin:5px;
+                padding:5px;
+                width: 500px;
+                height: 500px;
+                overflow: auto;
+                text-align:left;
+                line-height: 120%;
+                border-radius: 10px;
+                border: 2px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>These Are your words!</h1>
+        <div class="gfg">
+        <ul>
+          <% @words.each do |word| %>
+            <li><h3><%= word.word.upcase %></h5>
+              <ul>
+                <li><b>Definition: </b><%= word.definition %></li>
+                <li><b>Phonetics: </b><%= word.phonetic %></li>
+                <li><b>Link to recording: </b><%= word.phonetic_link %></li>
+                <li><b>Part of Speech: </b><%= word.part_of_speech %></li>
+                <li><b>Example sentence: </b><%= word.example %></li>
+                <li><b>Synonyms: </b><%= word.synonyms %></li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+        </div>
+        </center>
+    </body>
+</html> 
 

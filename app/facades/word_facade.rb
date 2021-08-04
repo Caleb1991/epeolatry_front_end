@@ -11,7 +11,7 @@ class WordFacade
     attributes = WordApiServices.users_words(user_id)[:data]
     attributes.map do |attributes|
       WordPoro.new(attributes[:attributes])
-    end[0]
+    end
   end
 
   def self.one_user_word(user_id, word_id)
