@@ -27,4 +27,9 @@
   <% else %>
     <p> No words looked up yet!</p>
   <% end %>
+
+<% else %>
+
+  <%= button_to "Add '#{@book.title}' to my 'To Read' Shelf", "/user/books?id=#{@book.id}"%>
+
 <% end %>

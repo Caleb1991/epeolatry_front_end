@@ -12,9 +12,9 @@ class User::BooksController < ApplicationController
   end
 
   def create
-    response = UserFacade.add_book_response(params[:id], sessions[:auth_token])
+    response = UserFacade.add_book_response(params[:id], current_user.access_token)
     flash[:notice] = response
-    # redirect
+    redirect_to user_book_path(params[:id])
   end
 
   def destroy
