@@ -67,8 +67,6 @@ group :test do
   gem 'simplecov'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
-  gem 'webmock'
-  gem 'vcr'
   gem 'database_cleaner-active_record'
 end
 
