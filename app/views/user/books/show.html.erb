@@ -19,7 +19,7 @@
     <% @book.shelves.each do |shelf| %>
     <tr id="<%=@book.id%>-<%=shelf.delete(" ")%>">
       <td><%= shelf %></td>
-      <td><%= button_to "Remove", method: :delete %></td>
+      <td><%= button_to "Remove", "/user/books/#{@book.id}?shelf=#{shelf}", method: :delete %></td>
     </tr>
     <% end %>
   </table>
