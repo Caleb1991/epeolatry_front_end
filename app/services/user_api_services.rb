@@ -3,8 +3,7 @@ class UserApiServices
     response = conn.get('api/v1/user/books') do |req|
       req.params[:auth_token] = auth_token
     end
-    # binding.pry
-    JSON.parse(response.body, symbolize_names: true)
+    parse_json(response)
   end
 
   def self.add_a_book(volume_id, auth_token, shelf_id = 2)
@@ -13,7 +12,7 @@ class UserApiServices
       req.params[:auth_token] = auth_token
       req.params[:shelf_id] = shelf_id
     end
-    
+
     response.status
   end
 
@@ -22,7 +21,7 @@ class UserApiServices
       req.params[:auth_token] = auth_token
       req.params[:shelf_id] = shelf_id
     end
-    
+
     response.status
   end
 
@@ -32,8 +31,12 @@ class UserApiServices
       req.params[:volume_id] = volume_id
       req.params[:user_id] = user_id
     end
-    
+
     response.status
+  end
+
+  def self.parse_json(response)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   private
