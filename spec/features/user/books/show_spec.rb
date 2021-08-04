@@ -1,12 +1,14 @@
 require 'rails_helper'
 
+# TODO: Add serach bar test + functionality for word search
+
 RSpec.describe 'Book show page' do
   before :each do
     @user = User.create!(username: 'Bob@Boberton.bobmail.com', access_token: 'token', uid: 'thisismyid')
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     visit user_dashboard_path(@user.uid)
 
-    @book_id = 'WxOFiAbwu_cC' #god of small things
+    @book_id = 'WxOFiAbwu_cC'
     VCR.turn_off!
   end
 
@@ -39,10 +41,10 @@ RSpec.describe 'Book show page' do
       stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
         .to_return(status: 200, body: mock_return, headers: {})
 
-        visit user_book_path(@book_id)
-        expect(page).to have_link("Calculus", :href=>"/user/books/#{@book_id}/word/Calculus")
-        expect(page).to have_link("Transcendental", :href=>"/user/books/#{@book_id}/word/Transcendental")
-        expect(page).to have_link("Photographic", :href=>"/user/books/#{@book_id}/word/Photographic")
+      visit user_book_path(@book_id)
+      expect(page).to have_link("Calculus", :href=>"/user/books/#{@book_id}/word/Calculus")
+      expect(page).to have_link("Transcendental", :href=>"/user/books/#{@book_id}/word/Transcendental")
+      expect(page).to have_link("Photographic", :href=>"/user/books/#{@book_id}/word/Photographic")
     end
 
     xit 'has a functional search bar to look up a word for that book' do
