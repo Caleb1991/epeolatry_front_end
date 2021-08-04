@@ -1,5 +1,5 @@
-class Users::DashboardController < ApplicationController
+class User::DashboardController < ApplicationController
   def show
-    
+
   end
 end
