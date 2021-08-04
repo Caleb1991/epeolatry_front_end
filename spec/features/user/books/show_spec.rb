@@ -45,7 +45,13 @@ RSpec.describe 'Book show page' do
         expect(page).to have_link("Photographic", :href=>"/user/books/#{@book_id}/word/Photographic")
     end
 
-    it 'has a search bar to look up a word for that book'
+    xit 'has a functional search bar to look up a word for that book' do
+      mock_return = File.open('./spec/fixtures/book_show_in_lib_no_words_fixture.json')
+      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
+        .to_return(status: 200, body: mock_return, headers: {})
+
+      expect(page).to have_field("Lookup a word")
+    end
   end
 
   describe 'for a book not in the reader\'s library' do
@@ -63,8 +69,28 @@ RSpec.describe 'Book show page' do
       expect(page).to_not have_content("Your Words for")
     end
 
-    it 'shows the option to add that book to the reader\'s library'
-    it 'upon clicking the add-book button, redirects to book show page'
-    it 'upon clicking the add-book button, book show includes search bar to look up word'
+    it 'shows the option to add that book to the reader\'s library' do
+      mock_return = File.open('./spec/fixtures/book_show_not_in_lib_fixture.json')
+      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
+        .to_return(status: 200, body: mock_return, headers: {})
+
+      visit user_book_path(@book_id)
+      expect(page).to have_button("Add #{@book.title} to my 'To Read' Shelf")
+    end
+
+    it 'upon clicking the add-book button, redirects to book show page with word search bar' do
+      mock_return = File.open('./spec/fixtures/book_show_not_in_lib_fixture.json')
+      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
+        .to_return(status: 200, body: mock_return, headers: {})
+
+      visit user_book_path(@book_id)
+      click_button("Add #{@book.title} to my 'To Read' Shelf")
+      expect(page).to have_current_path(user_book_path(@book_id))
+      expect(page).to have_content("Current Shelves:")
+      expect(page).to have_content("To Read")
+      expect(page).to have_content("Your Words for")
+      expect(page).to have_content("No words looked up yet!")
+      # expect(page).to have_field("Lookup a word")
+    end
   end
 end
