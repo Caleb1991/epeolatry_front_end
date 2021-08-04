@@ -7,27 +7,16 @@ RSpec.describe 'Book show page' do
     visit user_dashboard_path(@user.uid)
 
     @book_id = 'WxOFiAbwu_cC' #god of small things
-    @request_url = "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=auth_token=#{@user.uid}"
+    VCR.turn_off!
   end
 
   describe 'for a book in the reader\'s library' do
     it 'shows the books key information' do
-      VCR.turn_off!
       mock_return = File.open('./spec/fixtures/book_show_in_lib_no_words_fixture.json')
-      # stub_request(:get, "#{@request_url}")
-      #   .to_return(status: 200, body: mock_return, headers: {})
-
-      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/WxOFiAbwu_cC?auth_token=token&user_id=thisismyid").
-        with(
-          headers: {
-         'Accept'=>'*/*',
-         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-         'User-Agent'=>'Faraday v1.6.0'
-          }).
-        to_return(status: 200, body: mock_return, headers: {})
+      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
+        .to_return(status: 200, body: mock_return, headers: {})
 
       visit user_book_path(@book_id)
-      save_and_open_page
       expect(page).to have_content("The Sparrow")
       expect(page).to have_content("Mary Doria Russell")
       expect(page).to have_content("Fiction")
@@ -36,8 +25,16 @@ RSpec.describe 'Book show page' do
       expect(page).to have_content("Currently Reading")
     end
 
+    it 'if the book has no words associated, shows a note' do
+      mock_return = File.open('./spec/fixtures/book_show_in_lib_no_words_fixture.json')
+      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
+        .to_return(status: 200, body: mock_return, headers: {})
+
+        visit user_book_path(@book_id)
+        expect(page).to have_content("No words looked up yet!")
+    end
+    
     it 'shows the words saved for book, where words link to show page and are listed in order of creation'
-    it 'if the book has no words associated, shows a note to add first word'
     it 'has a search bar to look up a word for that book'
   end
 

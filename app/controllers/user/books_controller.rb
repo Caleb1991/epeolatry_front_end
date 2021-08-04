@@ -4,7 +4,6 @@ class User::BooksController < ApplicationController
   end
 
   def show
-    # binding.pry
     user_id = current_user.uid
     auth_token = current_user.access_token
     book_and_words = BookFacade.get_single_book(params[:id], user_id, auth_token)
