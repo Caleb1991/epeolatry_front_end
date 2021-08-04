@@ -1,5 +1,6 @@
 <% @books.each do |book| %>
-  <p><%= link_to "#{book.title}". "/user/books/#{book.id}" %></p>
-  <p>Author: <%= book.author %></p>
-  <p>Genre: <%= book.genre %></p>
+  <p><%= link_to "#{book.title}", "/user/books/#{book.id}" %></p>
+  <p>Author: <%= book.authors %></p>
+  <p>Genre: <%= book.genres %></p>
+  <p>Shelf: <%= book.shelves %></p>
 <% end %>
