@@ -1,4 +1,4 @@
-class Users::BooksController < ApplicationController
+class User::BooksController < ApplicationController
   def index
     @books = UserFacade.get_my_books(session[:auth_token])
   end
@@ -17,6 +17,6 @@ class Users::BooksController < ApplicationController
   def destroy
     response = UserFacade.remove_book_response(params[:id], sessions[:auth_token])
     flash[:notice] = response
-    # redirect 
+    # redirect
   end
 end
