@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://epeolatry-back-end.herokuapp.com/api/v1/user/words?user_id=B4d1swEACAAJ&volume_id=1233&word=blah
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Aug 2021 19:37:49 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5a3a48d79ebebe71a5c4f2a4521bed85"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ae5f67a0-8f24-4356-870c-abd4f1fd81e0
+      X-Runtime:
+      - '0.185658'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"response":"Created"}'
+  recorded_at: Wed, 04 Aug 2021 19:37:50 GMT
+- request:
+    method: get
+    uri: https://epeolatry-back-end.herokuapp.com/api/v1/book/search?volume_id=:book_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Aug 2021 19:37:49 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"33ddfac75e28e2e415f1745192a5556f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1fd6ed1f-3dd1-4bd9-bc61-810cc52e37ed
+      X-Runtime:
+      - '0.002382'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"error":"No search sent"}'
+  recorded_at: Wed, 04 Aug 2021 19:37:50 GMT
+recorded_with: VCR 6.0.0

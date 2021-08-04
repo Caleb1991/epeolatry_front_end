@@ -1,5 +1,5 @@
 class UserFacade
-  
+
   def self.get_my_books(auth_token)
     json = UserApiServices.get_users_books(auth_token)[:data]
 
@@ -35,8 +35,8 @@ class UserFacade
     end
   end
 
-  def self.create_glossary_response(word, volume_id, user_id)
-    json = UserApiServices.add_word_to_glossary(word, volume_id, user_id)
+  def self.create_glossary_response(word, book_id, user_id)
+    json = UserApiServices.add_word_to_glossary(word, book_id, user_id)
 
     if json == 201
       'Word added to book!'

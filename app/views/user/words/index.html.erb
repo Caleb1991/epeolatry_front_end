@@ -1,6 +1,6 @@
 <h1>Word quick check</h1>
 
-<%= form_with url: "/users/words/:word", method: :get, local: true do |f| %>
+<%= form_with url: "/users/word/:word", method: :get, local: true do |f| %>
   <%= f.label :word, "Quick Search" %>
   <%= f.text_field :word, placeholder: "type word here" %><br><br>
   <%= f.submit("Search") %>
