@@ -15,9 +15,14 @@
 
 <% if !@book.shelves.nil? %>
   <p>Current Shelves:</p>
-  <% @book.shelves.each do |shelf| %>
-    <%= shelf %>
-  <% end %>
+  <table>
+    <% @book.shelves.each do |shelf| %>
+    <tr id="<%=@book.id%>-<%=shelf.delete(" ")%>">
+      <td><%= shelf %></td>
+      <td><%= button_to "Remove", method: :delete %></td>
+    </tr>
+    <% end %>
+  </table>
 
   <br>
 
