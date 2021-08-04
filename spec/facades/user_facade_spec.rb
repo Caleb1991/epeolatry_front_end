@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe UserFacade do
   describe 'class methods' do
     describe '.get_my_books' do
-      it 'returns book poros of all the users books' do
+      xit 'returns book poros of all the users books' do
         VCR.use_cassette 'facade_user_books' do
           @actual = UserFacade.get_my_books("ya29.a0ARrdaM-vu2sw0V27N15VulFkM9EH0AciH_l9TeZan0Zw8wVezLWaW81KHj_Y4Y8tdCZP2m0crX6spLCbxbS1gyyQ4qkQ7BI_bg4U1lAiMkvzZoUQxjwPuVV6uCMxa37sqCBT0EndhXWvjFKedg76jD4oifl58A")
         end

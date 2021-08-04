@@ -4,8 +4,7 @@ class BooksApiServices
       response = conn.get('/api/v1/book/search') do |req|
         req.params[:search] = search
       end
-      
-      JSON.parse(response.body, symbolize_names: true)
+      parse_json(response)
     end
   end
 
@@ -13,7 +12,10 @@ class BooksApiServices
     response = conn.get('/api/v1/book/search') do |req|
       req.params[:volume_id] = volume_id
     end
-    
+    parse_json(response)
+  end
+
+  def self.parse_json(response)
     JSON.parse(response.body, symbolize_names: true)
   end
 
