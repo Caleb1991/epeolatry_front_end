@@ -40,9 +40,9 @@ RSpec.describe 'Book show page' do
         .to_return(status: 200, body: mock_return, headers: {})
 
         visit user_book_path(@book_id)
-        expect(page).to have_link("Calculus", :href => "/user/words/word/calculus")
-        expect(page).to have_link("Transcendental", :href => "/user/words/word/transcendental")
-        expect(page).to have_link("Photographic", :href => "/user/words/word/photographic")
+        expect(page).to have_link("Calculus", :href=>"/user/books/#{@book_id}/word/Calculus")
+        expect(page).to have_link("Transcendental", :href=>"/user/books/#{@book_id}/word/Transcendental")
+        expect(page).to have_link("Photographic", :href=>"/user/books/#{@book_id}/word/Photographic")
     end
 
     it 'has a search bar to look up a word for that book'

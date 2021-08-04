@@ -24,7 +24,7 @@
 <% if !@words.first.nil? %>
   <p>Words for this book:</p>
   <% @words.each do |word| %>
-    <%= word %>
+    <%= link_to word, "/user/books/#{@book.id}/word/#{word}" %>
   <% end %>
 <% else %>
   <p> No words looked up yet!</p>
