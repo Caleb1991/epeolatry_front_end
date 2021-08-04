@@ -16,13 +16,7 @@
   <h3 align="center">e . p . e . o . l . a . t . r . y</h3>
 
   <p align="center">
-    an app to catalog your literary and vernacular journey. <br> propelling your pronunciation prowess of perplexing prose <br> <em>epi...olive...uh...tree?</em> --> <strong>epeolatry</strong> <br>
-    <br />
-    <a href="https://epeolatrys-rex.herokuapp.com/">View Demo</a>
-    ·
-    <a href="BUGSREPORTLINKHERE">Report Bug</a>
-    ·
-    <a href="FEATUREREQUESTLINKHERE">Request Feature</a>
+    an app to catalog your literary and vernacular journey. <br> propelling your pronunciation prowess of perplexing prose <br> <em>epi...olive...uh...tree?</em> --> <strong>epeolatry</strong> <br><br>
   </p>
 </p>
 
