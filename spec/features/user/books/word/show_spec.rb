@@ -8,7 +8,7 @@ RSpec.describe 'users books words' do
       book_id = 'B4d1swEACAAJ'
       visit  "/user/books/#{book_id}/word/#{word}"
 
-      expect(page).to have_content('blah')
+      expect(page).to have_content('caterwaul')
       expect(page).to have_button('Save to Book')
       expect(page).to have_button('Back to Book')
     end
@@ -33,7 +33,7 @@ RSpec.describe 'users books words' do
   it 'dont save word' do
     user1 = User.create!(username: 'test', access_token: 'fake token', uid: '1233')
     User::Books::WordController.any_instance.stub(:current_user).and_return(user1)
-    VCR.use_cassette 'new word glossary add' do
+    VCR.use_cassette 'new word glossary dont add' do
       word = 'caterwaul'
       book_id = 'B4d1swEACAAJ'
 

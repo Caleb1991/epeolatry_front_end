@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 04 Aug 2021 20:08:19 GMT
+      - Wed, 04 Aug 2021 20:12:21 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 78443c2c-04d8-4cec-b616-86d007fc86ec
+      - 47d5bed0-abd2-4b0b-82fc-e848ee74a4d1
       X-Runtime:
-      - '0.065998'
+      - '0.067465'
       Transfer-Encoding:
       - chunked
       Via:
@@ -42,5 +42,47 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJkYXRhIjp7ImlkIjoiY2F0ZXJ3YXVsIiwidHlwZSI6IndvcmRfcG9ybyIsImF0dHJpYnV0ZXMiOnsid29yZCI6ImNhdGVyd2F1bCIsImRlZmluaXRpb24iOiJNYWtlIGEgc2hyaWxsIGhvd2xpbmcgb3Igd2FpbGluZyBub2lzZSBsaWtlIHRoYXQgb2YgYSBjYXQuIiwicGhvbmV0aWMiOiIvy4hrw6ZkyZlyy4x3yZRsLyIsInBob25ldGljX2xpbmsiOiJodHRwczovL2xleC1hdWRpby51c2VyZW1hcmthYmxlLmNvbS9tcDMvY2F0ZXJ3YXVsX3VzXzEubXAzIiwicGFydF9vZl9zcGVlY2giOiJpbnRyYW5zaXRpdmUgdmVyYiIsInN5bm9ueW1zIjoiW1wiaG93bFwiLCBcImhvd2xpbmdcIiwgXCJ3YWlsXCIsIFwid2FpbGluZ1wiLCBcInNjcmVlY2hcIiwgXCJzY3JlZWNoaW5nXCIsIFwic2hyaWVrXCIsIFwic2hyaWVraW5nXCIsIFwic2NyZWFtXCIsIFwic2NyZWFtaW5nXCIsIFwiYmF3bFwiLCBcImJhd2xpbmdcIiwgXCJjcnlcIiwgXCJjcnlpbmdcIiwgXCJ5ZWxsXCIsIFwieWVsbGluZ1wiLCBcInllbHBcIiwgXCJ5ZWxwaW5nXCIsIFwieW93bFwiLCBcInlvd2xpbmdcIiwgXCJzcXVhbGxcIiwgXCJzcXVhbGxpbmdcIiwgXCJ3aGluZVwiLCBcIndoaW5pbmdcIiwgXCJ1bHVsYXRpbmdcIl0iLCJleGFtcGxlIjoiaGUgc2VlbXMgdG8gdGhpbmsgdGhhdCBzaW5naW5nIHNvdWxmdWxseSBpcyB0byB3aGluZSBhbmQgY2F0ZXJ3YXVsIHR1bmVsZXNzbHkifX19
-  recorded_at: Wed, 04 Aug 2021 20:08:19 GMT
+  recorded_at: Wed, 04 Aug 2021 20:12:22 GMT
+- request:
+    method: get
+    uri: https://epeolatry-back-end.herokuapp.com/api/v1/book/search?volume_id=B4d1swEACAAJ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Aug 2021 20:12:22 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"33ddfac75e28e2e415f1745192a5556f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 11820f3e-7ea5-4245-b6fa-6d275028ceb0
+      X-Runtime:
+      - '0.008435'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"error":"No search sent"}'
+  recorded_at: Wed, 04 Aug 2021 20:12:23 GMT
 recorded_with: VCR 6.0.0

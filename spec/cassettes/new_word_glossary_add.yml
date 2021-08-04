@@ -1,8 +1,51 @@
 ---
 http_interactions:
 - request:
+    method: get
+    uri: https://epeolatry-back-end.herokuapp.com/api/v1/word/search?q=caterwaul
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Aug 2021 20:10:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"57fa8631021cb5bfb9a2854d58c882b8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7100eaf8-f8cf-4a2d-8102-7427787d402e
+      X-Runtime:
+      - '0.103660'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjoiY2F0ZXJ3YXVsIiwidHlwZSI6IndvcmRfcG9ybyIsImF0dHJpYnV0ZXMiOnsid29yZCI6ImNhdGVyd2F1bCIsImRlZmluaXRpb24iOiJNYWtlIGEgc2hyaWxsIGhvd2xpbmcgb3Igd2FpbGluZyBub2lzZSBsaWtlIHRoYXQgb2YgYSBjYXQuIiwicGhvbmV0aWMiOiIvy4hrw6ZkyZlyy4x3yZRsLyIsInBob25ldGljX2xpbmsiOiJodHRwczovL2xleC1hdWRpby51c2VyZW1hcmthYmxlLmNvbS9tcDMvY2F0ZXJ3YXVsX3VzXzEubXAzIiwicGFydF9vZl9zcGVlY2giOiJpbnRyYW5zaXRpdmUgdmVyYiIsInN5bm9ueW1zIjoiW1wiaG93bFwiLCBcImhvd2xpbmdcIiwgXCJ3YWlsXCIsIFwid2FpbGluZ1wiLCBcInNjcmVlY2hcIiwgXCJzY3JlZWNoaW5nXCIsIFwic2hyaWVrXCIsIFwic2hyaWVraW5nXCIsIFwic2NyZWFtXCIsIFwic2NyZWFtaW5nXCIsIFwiYmF3bFwiLCBcImJhd2xpbmdcIiwgXCJjcnlcIiwgXCJjcnlpbmdcIiwgXCJ5ZWxsXCIsIFwieWVsbGluZ1wiLCBcInllbHBcIiwgXCJ5ZWxwaW5nXCIsIFwieW93bFwiLCBcInlvd2xpbmdcIiwgXCJzcXVhbGxcIiwgXCJzcXVhbGxpbmdcIiwgXCJ3aGluZVwiLCBcIndoaW5pbmdcIiwgXCJ1bHVsYXRpbmdcIl0iLCJleGFtcGxlIjoiaGUgc2VlbXMgdG8gdGhpbmsgdGhhdCBzaW5naW5nIHNvdWxmdWxseSBpcyB0byB3aGluZSBhbmQgY2F0ZXJ3YXVsIHR1bmVsZXNzbHkifX19
+  recorded_at: Wed, 04 Aug 2021 20:10:13 GMT
+- request:
     method: post
-    uri: https://epeolatry-back-end.herokuapp.com/api/v1/user/words?user_id=B4d1swEACAAJ&volume_id=1233&word=blah
+    uri: https://epeolatry-back-end.herokuapp.com/api/v1/user/words?user_id=B4d1swEACAAJ&volume_id=1233&word=caterwaul
     body:
       encoding: UTF-8
       string: ''
@@ -23,7 +66,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 04 Aug 2021 19:37:49 GMT
+      - Wed, 04 Aug 2021 20:10:13 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -33,9 +76,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ae5f67a0-8f24-4356-870c-abd4f1fd81e0
+      - 39e3e2da-a9ed-415d-953c-1ccfee8e6641
       X-Runtime:
-      - '0.185658'
+      - '0.097706'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,7 +86,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"response":"Created"}'
-  recorded_at: Wed, 04 Aug 2021 19:37:50 GMT
+  recorded_at: Wed, 04 Aug 2021 20:10:14 GMT
 - request:
     method: get
     uri: https://epeolatry-back-end.herokuapp.com/api/v1/book/search?volume_id=:book_id
@@ -65,7 +108,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 04 Aug 2021 19:37:49 GMT
+      - Wed, 04 Aug 2021 20:10:14 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -75,9 +118,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1fd6ed1f-3dd1-4bd9-bc61-810cc52e37ed
+      - 0d350943-eeab-49fa-a3d2-e1fb936455f7
       X-Runtime:
-      - '0.002382'
+      - '0.008304'
       Transfer-Encoding:
       - chunked
       Via:
@@ -85,5 +128,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"error":"No search sent"}'
-  recorded_at: Wed, 04 Aug 2021 19:37:50 GMT
+  recorded_at: Wed, 04 Aug 2021 20:10:14 GMT
 recorded_with: VCR 6.0.0
