@@ -1,6 +1,8 @@
 <% @books.each do |book| %>
-  <p><%= link_to "#{book.title}", "/user/books/#{book.id}" %></p>
+  <h3><%= link_to "#{book.title}", "/user/books/#{book.id}" %></h3>
   <p>Author: <%= book.authors %></p>
   <p>Genre: <%= book.genres %></p>
   <p>Shelf: <%= book.shelves %></p>
 <% end %>
+
+<%== pagy_nav(@pagy) %>

@@ -4,7 +4,7 @@ RSpec.describe 'Books index page' do
   before :each do
     VCR.turn_on!
   end
-  it 'shows all of a users books' do
+  xit 'shows all of a users books' do
     VCR.turn_off!
     stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/user/books?auth_token")
     .to_return(status: 200, body: File.open('./spec/fixtures/books_index.json').read, headers: {})

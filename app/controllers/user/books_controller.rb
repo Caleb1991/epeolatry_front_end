@@ -1,6 +1,7 @@
 class User::BooksController < ApplicationController
   def index
     @books = UserFacade.get_my_books(session[:auth_token])
+    @pagy, @books = pagy(Product.some_scope)
   end
 
   def show
