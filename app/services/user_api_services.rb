@@ -7,7 +7,8 @@ class UserApiServices
   end
 
   def self.add_a_book(volume_id, auth_token, shelf_id = 2)
-    response = conn.post "/api/v1/user/books/#{volume_id}" do |req|
+    response = conn.post "/api/v1/user/books" do |req|
+      req.params[:volume_id] = volume_id
       req.params[:auth_token] = auth_token
       req.params[:shelf_id] = shelf_id
     end

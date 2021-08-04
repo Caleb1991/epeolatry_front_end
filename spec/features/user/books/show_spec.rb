@@ -155,7 +155,7 @@ RSpec.describe 'Book show page' do
     end
 
     it 'upon clicking the add-book button, redirects to book show page with word search bar' do
-      stub_request(:post, "https://epeolatry-back-end.herokuapp.com/api/v1/user/books/WxOFiAbwu_cC?auth_token=token&shelf_id=2")
+      stub_request(:post, "https://epeolatry-back-end.herokuapp.com/api/v1/user/books?auth_token=token&shelf_id=2&volume_id=WxOFiAbwu_cC")
         .to_return(status: 204, body: "", headers: {})
 
       pre_mock_return = File.open('./spec/fixtures/book_show_not_in_lib_fixture.json')
