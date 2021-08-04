@@ -33,8 +33,18 @@ RSpec.describe 'Book show page' do
         visit user_book_path(@book_id)
         expect(page).to have_content("No words looked up yet!")
     end
-    
-    it 'shows the words saved for book, where words link to show page and are listed in order of creation'
+
+    it 'shows the words saved for book, where words link to show page' do #DROP FEATURE?  are listed in order of creation
+      mock_return = File.open('./spec/fixtures/book_show_in_lib_with_words_fixture.json')
+      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.uid}")
+        .to_return(status: 200, body: mock_return, headers: {})
+
+        visit user_book_path(@book_id)
+        expect(page).to have_link("Calculus", :href => "/user/words/word/calculus")
+        expect(page).to have_link("Transcendental", :href => "/user/words/word/transcendental")
+        expect(page).to have_link("Photographic", :href => "/user/words/word/photographic")
+    end
+
     it 'has a search bar to look up a word for that book'
   end
 
