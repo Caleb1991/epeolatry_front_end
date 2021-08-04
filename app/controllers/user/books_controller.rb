@@ -4,8 +4,12 @@ class User::BooksController < ApplicationController
   end
 
   def show
-    @book = BookFacade.get_single_book(params[:id])
-    # @words = WordFacade.get_words_for_given_book(sessions[:user_id], params[:id])
+    # binding.pry
+    user_id = current_user.uid
+    auth_token = current_user.access_token
+    book_and_words = BookFacade.get_single_book(params[:id], user_id, auth_token)
+    @book = book_and_words[:book]
+    @words = book_and_words[:words]
   end
 
   def create

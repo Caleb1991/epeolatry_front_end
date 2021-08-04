@@ -1,0 +1,31 @@
+<h1><%= @book.title %></h1>
+
+<p>Authors:</p>
+<% @book.authors.each do |author| %>
+  <%= author %>
+<% end %>
+
+<p>Book Summary:</p>
+<%= @book.summary %>
+
+<p>Genre(s):</p>
+<% @book.genres.each do |genre| %>
+  <%= genre %>
+<% end %>
+
+<% if !@book.shelves.nil? %>
+  <p>Current Shelves:</p>
+  <% @book.shelves.each do |shelf| %>
+    <%= shelf %>
+  <% end %>
+<% end %>
+
+<h3>Your Words for <%= @book.title %></h3>
+<% if !@words.first.nil? %>
+  <p>Words for this book:</p>
+  <% @words.each do |word| %>
+    <%= word %>
+  <% end %>
+<% else %>
+  <p> No words looked up yet!</p>
+<% end %>
