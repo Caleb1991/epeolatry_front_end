@@ -15,6 +15,5 @@ class WordPoro
     @part_of_speech = info[:part_of_speech]
     @synonyms = info[:synonyms]
     @example = info[:example]
-    
   end
 end
