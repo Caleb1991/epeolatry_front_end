@@ -4,11 +4,7 @@ class Users::WordsController < ApplicationController
     # @words = @user.words.all
   end
 
-  def show #this show action is the one I created for words unrelated to a book with hopes that it will be able to serve both
-    if params[:word]
-      @word = WordFacade.search(params[:word]).first
-    else
-      @word = current_user.words.find_by(params[:word])
-    end
+  def show # moved to books word_controller
+
   end
 end
