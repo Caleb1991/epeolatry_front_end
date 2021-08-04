@@ -1,0 +1,14 @@
+{
+  "bookData":
+    {"id":"ZXRxl3Bl2xMC",
+      "type":"book",
+      "attributes":
+       {"title":"The Sparrow",
+        "authors":["Mary Doria Russell"],
+        "genres":["Fiction"],
+        "description":"A visionary work",
+        "shelves": ["To Read", "Currently Reading"]}
+      },
+  "wordData":
+    []
+  }
