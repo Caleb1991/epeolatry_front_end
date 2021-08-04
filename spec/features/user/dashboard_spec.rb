@@ -18,13 +18,13 @@ RSpec.describe 'As an authenticated user' do
     xit "displays link to user's book index" do
       expect(page).to have_button("My Beautiful Bevy of Books")
       click_button("My Beautiful Bevy of Books")
-      expect(current_path).to eq(user_books_path(@user.id))
+      expect(current_path).to eq(user_books_path)
     end
 
     xit "displays link to user's word index" do
       expect(page).to have_button("My Wordly World of Words")
       click_button("My Wordly World of Words")
-      expect(current_path).to eq(user_words_path(@user.id))
+      expect(current_path).to eq(user_words_path)
     end
 
     xit 'displays button to LOG OUT' do
