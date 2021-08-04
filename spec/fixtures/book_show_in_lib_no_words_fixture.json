@@ -10,5 +10,13 @@
         "shelves": ["To Read", "Currently Reading"]}
       },
   "wordData":
-    []
+    [
+      {"id":null,
+      "type":"word",
+      "attributes":
+         {
+           "word":null
+          }
+      }
+    ]
   }

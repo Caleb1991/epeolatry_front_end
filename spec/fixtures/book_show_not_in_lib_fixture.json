@@ -7,8 +7,16 @@
         "authors":["Mary Doria Russell"],
         "genres":["Fiction"],
         "description":"A visionary work",
-        "shelves":"nil"}
+        "shelves":null}
       },
   "wordData":
-    []
+    [
+      {"id":null,
+      "type":"word",
+      "attributes":
+         {
+           "word":null
+          }
+      }
+    ]
   }

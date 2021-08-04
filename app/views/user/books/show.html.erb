@@ -18,13 +18,13 @@
   <% @book.shelves.each do |shelf| %>
     <%= shelf %>
   <% end %>
-<% end %>
 
-<h3>Your Words for <%= @book.title %></h3>
-<% if !@words.first.nil? %>
-  <% @words.each do |word| %>
-    <%= link_to word, "/user/books/#{@book.id}/word/#{word}" %>
+  <h3>Your Words for <%= @book.title %></h3>
+  <% if !@words.first.nil? %>
+    <% @words.each do |word| %>
+      <%= link_to word, "/user/books/#{@book.id}/word/#{word}" %>
+    <% end %>
+  <% else %>
+    <p> No words looked up yet!</p>
   <% end %>
-<% else %>
-  <p> No words looked up yet!</p>
 <% end %>
