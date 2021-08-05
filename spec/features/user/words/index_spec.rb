@@ -18,8 +18,8 @@ RSpec.describe 'word index' do
       to_return(status: 200, body: File.open('./spec/fixtures/user_words_index_fixture.json').read, headers: {})
 
       visit user_words_path
-      save_and_open_page
 
+      expect(page).to have_content('SAD', count: 3)
     end
   end
 end
