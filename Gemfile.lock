@@ -142,13 +142,15 @@ GEM
     marcel (1.0.1)
     method_source (1.0.0)
     mini_mime (1.1.0)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     nio4r (2.5.8)
-    nokogiri (1.12.1-x86_64-darwin)
+    nokogiri (1.12.1)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     oauth2 (1.4.7)
       faraday (>= 0.8, < 2.0)
@@ -168,6 +170,7 @@ GEM
     omniauth-oauth2 (1.7.1)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
+    pagy (4.10.1)
     pg (1.2.3)
     popper_js (2.9.2)
     pry (0.14.1)
@@ -314,6 +317,7 @@ DEPENDENCIES
   launchy
   listen (>= 3.0.5, < 3.2)
   omniauth-google-oauth2
+  pagy
   pg (>= 0.18, < 2.0)
   pry
   puma (~> 3.11)

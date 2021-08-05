@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     user.update(user_attributes)
     session[:user_id] = user.id
     session[:auth_token] = user.uid
-    redirect_to users_dashboard_path(user.id)
+    redirect_to user_dashboard_path(user.id)
   end
 
   def destroy

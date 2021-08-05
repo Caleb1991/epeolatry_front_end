@@ -1,7 +1,7 @@
 class UserFacade
 
   def self.get_my_books(auth_token)
-    json = UserApiServices.get_users_books(auth_token)[:data]
+    json = UserApiServices.get_users_books(auth_token)
 
     json.map do |book_attributes|
       BookPoro.new(
@@ -25,7 +25,7 @@ class UserFacade
     end
   end
 
-  def self.remove_book_response(book, auth_token, shelf = 2)
+  def self.remove_book_response(book, auth_token, shelf)
     json = UserApiServices.remove_a_book(book, auth_token, shelf)
 
     if json == 204
