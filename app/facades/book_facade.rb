@@ -15,8 +15,8 @@ class BookFacade
     end
   end
 
-  def self.get_single_book(volume_id, user_id, auth_token)
-    output = BooksApiServices.get_a_book(volume_id, user_id, auth_token)
+  def self.get_single_book(volume_id)
+    output = BooksApiServices.get_a_book(volume_id)
     if output != ''
       book = BookPoro.new(
                         id: output[:bookData][:id],

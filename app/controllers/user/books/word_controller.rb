@@ -1,8 +1,8 @@
 class User::Books::WordController < ApplicationController
   def show
     @word = WordFacade.search(params[:word]).first
-    # @book = BookFacade.get_single_book(params[:book_id])
-    @book = BookPoro.new(title: 'Title', id: params[:book_id])
+    @book = BookFacade.get_single_book(params[:book_id])
+    # @book = BookPoro.new(title: 'Title', id: params[:book_id])
   end
 
   def new
@@ -16,7 +16,7 @@ class User::Books::WordController < ApplicationController
       @word = response.first
       redirect_to "/user/books/#{params[:book_id]}?word_search=#{@word.word}"
     else
-      flash[:errpr] = "Word not found"
+      flash[:error] = "Word not found"
       redirect_to "/user/books/#{params[:book_id]}"
     end
   end

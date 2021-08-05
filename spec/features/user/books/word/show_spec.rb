@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'users books words' do
+  before :each do
+    VCR.turn_on!
+  end
   it 'unsaved word show' do
     user1 = User.create!(username: 'test', access_token: 'fake token', uid: '1233')
     VCR.use_cassette 'book word search' do
