@@ -5,15 +5,13 @@ class WordFacade
       WordPoro.new(attribute[1][:attributes])
     end
   end
-  #the above and below methods work almost identically. I, Alex, left the two diff syntax for educational purposes.
+#the above and below methods work almost identically. I, Alex, left the two diff syntax for educational purposes.
 
   def self.all_users_words(user_id)
     attributes = WordApiServices.users_words(user_id)[:data]
-
-    return 'No Words Saved' if attributes.class != Array
     attributes.map do |attributes|
-      WordBooksPoro.new(attributes[:attributes])
-    end
+      WordPoro.new(attributes[:attributes])
+    end[0]
   end
 
   def self.one_user_word(user_id, word_id)

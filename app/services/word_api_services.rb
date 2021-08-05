@@ -10,6 +10,7 @@ class WordApiServices
       req.params[:user_id] = user_id
       #another placeholder, may become unneccessary
     end
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
