@@ -44,4 +44,15 @@ class UserFacade
       'Failed to add word to book.'
     end
   end
+
+  def self.my_word_stats(user_id)
+    json = UserApiServices.get_my_word_stats(user_id)
+    json.map do |stats|
+      WordStatsPoro.new(
+        avg_per_book: stats[:avg_per_book],
+        most_frequent: stats[:most_frequent],
+        longest_word: stats[:longest_word]
+      )
+    end
+  end
 end

@@ -35,6 +35,13 @@ class UserApiServices
     response.status
   end
 
+  def self.get_my_word_stats(user_id)
+    response = conn.get "/api/v1/user/dashboard/#{user_id}"
+binding.pry
+
+    response.status
+  end
+
   private
 
   def self.conn
