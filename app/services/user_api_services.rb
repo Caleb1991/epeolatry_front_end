@@ -1,6 +1,6 @@
 class UserApiServices
   def self.get_users_books(auth_token)
-    response = conn.get('/api/v1/user/books') do |req|
+    response = conn.get "/api/v1/user/books" do |req|
       req.params[:auth_token] = auth_token
     end
     JSON.parse(response.body, symbolize_names: true)
