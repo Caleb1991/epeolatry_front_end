@@ -1,7 +1,7 @@
 class UserFacade
 
   def self.get_my_books(auth_token)
-    json = UserApiServices.get_users_books(auth_token)
+    json = UserApiServices.get_users_books(auth_token)[:data]
 
     json.map do |book_attributes|
       BookPoro.new(
