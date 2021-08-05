@@ -15,64 +15,21 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 500
+      message: Internal Server Error
     headers:
       Server:
       - Cowboy
       Date:
-      - Thu, 05 Aug 2021 02:15:39 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"57fa8631021cb5bfb9a2854d58c882b8"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 9fd1ac10-e6e7-40fb-acfe-ad7eefaa34da
-      X-Runtime:
-      - '0.271989'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJkYXRhIjp7ImlkIjoiY2F0ZXJ3YXVsIiwidHlwZSI6IndvcmRfcG9ybyIsImF0dHJpYnV0ZXMiOnsid29yZCI6ImNhdGVyd2F1bCIsImRlZmluaXRpb24iOiJNYWtlIGEgc2hyaWxsIGhvd2xpbmcgb3Igd2FpbGluZyBub2lzZSBsaWtlIHRoYXQgb2YgYSBjYXQuIiwicGhvbmV0aWMiOiIvy4hrw6ZkyZlyy4x3yZRsLyIsInBob25ldGljX2xpbmsiOiJodHRwczovL2xleC1hdWRpby51c2VyZW1hcmthYmxlLmNvbS9tcDMvY2F0ZXJ3YXVsX3VzXzEubXAzIiwicGFydF9vZl9zcGVlY2giOiJpbnRyYW5zaXRpdmUgdmVyYiIsInN5bm9ueW1zIjoiW1wiaG93bFwiLCBcImhvd2xpbmdcIiwgXCJ3YWlsXCIsIFwid2FpbGluZ1wiLCBcInNjcmVlY2hcIiwgXCJzY3JlZWNoaW5nXCIsIFwic2hyaWVrXCIsIFwic2hyaWVraW5nXCIsIFwic2NyZWFtXCIsIFwic2NyZWFtaW5nXCIsIFwiYmF3bFwiLCBcImJhd2xpbmdcIiwgXCJjcnlcIiwgXCJjcnlpbmdcIiwgXCJ5ZWxsXCIsIFwieWVsbGluZ1wiLCBcInllbHBcIiwgXCJ5ZWxwaW5nXCIsIFwieW93bFwiLCBcInlvd2xpbmdcIiwgXCJzcXVhbGxcIiwgXCJzcXVhbGxpbmdcIiwgXCJ3aGluZVwiLCBcIndoaW5pbmdcIiwgXCJ1bHVsYXRpbmdcIl0iLCJleGFtcGxlIjoiaGUgc2VlbXMgdG8gdGhpbmsgdGhhdCBzaW5naW5nIHNvdWxmdWxseSBpcyB0byB3aGluZSBhbmQgY2F0ZXJ3YXVsIHR1bmVsZXNzbHkifX19
-  recorded_at: Thu, 05 Aug 2021 02:15:39 GMT
-- request:
-    method: get
-    uri: https://epeolatry-back-end.herokuapp.com/api/v1/books/B4d1swEACAAJ?auth_token=fake%20token&user_id=1233
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.6.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Aug 2021 02:15:39 GMT
+      - Thu, 05 Aug 2021 22:48:17 GMT
       Connection:
       - keep-alive
       Content-Type:
       - text/html; charset=UTF-8
       X-Request-Id:
-      - dfc4bc1a-12f3-4ee1-a058-7c8d974fc749
+      - f2679753-b729-40dd-b311-e54dd0b14874
       X-Runtime:
-      - '0.004164'
+      - '0.240656'
       Content-Length:
       - '0'
       Via:
@@ -80,5 +37,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 05 Aug 2021 02:15:40 GMT
+  recorded_at: Thu, 05 Aug 2021 22:48:18 GMT
 recorded_with: VCR 6.0.0

@@ -13,8 +13,6 @@ class BooksApiServices
     response = conn.get("/api/v1/user/books/#{volume_id}")  do |req|
       req.params[:user_id] = user_id
       req.params[:auth_token] = auth_token
-      req.params[:book_id] = volume_id
-      req.params[:user_id] = user_id
     end
     parse_json(response)
   end

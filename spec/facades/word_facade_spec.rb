@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'word Facade' do
-  it 'finds information about a word' do
+  xit 'finds information about a word' do
     VCR.use_cassette 'caterwaul search' do
       word = 'caterwaul'
       result = WordFacade.search(word)[0]
@@ -10,7 +10,7 @@ RSpec.describe 'word Facade' do
     end
   end
   describe 'users words' do
-    it 'can find all users words' do
+    xit 'can find all users words' do
       VCR.use_cassette 'users words' do
         user_id = 12
         result = WordFacade.all_users_words(user_id)
@@ -21,7 +21,7 @@ RSpec.describe 'word Facade' do
   end
 
   describe 'users words with books' do
-    it 'can find all users words' do
+    xit 'can find all users words' do
       VCR.use_cassette 'users words books' do
         user_id = 12
         word = 'sad'

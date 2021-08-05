@@ -19,7 +19,7 @@ class WordApiServices
     end
     JSON.parse(response.body, symbolize_names: true)
   end
-  
+
 #############TEMPLATES BELOW############
 
   def self.get_words_for_single_book(user_id, book_id)

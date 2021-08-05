@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'back_end word_api_service' do
-  it 'can get info' do
+  xit 'can get info' do
     VCR.use_cassette 'caterwaul search' do
 
     result = WordApiServices.search('caterwaul')
@@ -9,7 +9,7 @@ RSpec.describe 'back_end word_api_service' do
     end
   end
   describe 'books words' do
-    it 'can get a users books saved words' do
+  it 'can get a users books saved words' do
       VCR.use_cassette 'users words' do
 
       result = WordApiServices.users_words(12)
@@ -18,7 +18,7 @@ RSpec.describe 'back_end word_api_service' do
     end
   end
   describe 'words books' do
-    it 'can get books for a users word' do
+    xit 'can get books for a users word' do
       VCR.use_cassette 'words books' do
       user_id = 12
       word = 'sad'
