@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     user = User.find_or_create_by(username: auth_hash['info']['email'])
     user.update(user_attributes)
     session[:user_id] = user.id
-    session[:auth_token] = user.uid
+    # session[:auth_token] = user.access_token
     redirect_to user_dashboard_path(user.id)
   end
 
