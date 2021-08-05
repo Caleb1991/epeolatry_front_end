@@ -17,8 +17,5 @@ RSpec.describe 'Welcome Page' do
       # expect(current_path).to eq('https://accounts.google.com/o/oauth2/auth/oauthchooseaccount')
     end
 
-    it 'displays option to create account' do
-      expect(page).to have_link("Create Reader")
-    end
   end
 end
