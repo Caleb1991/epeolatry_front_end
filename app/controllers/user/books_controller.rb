@@ -6,7 +6,7 @@ class User::BooksController < ApplicationController
     # else
     #   @pagy, @books = pagy_array(UserFacade.get_my_books(session[:auth_token]))
     # end
-    @books = UserFacade.get_my_books(params[:auth_token])
+    @books = UserFacade.get_my_books(current_user.access_token)
   end
 
   def show
