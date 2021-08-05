@@ -1,4 +1,3 @@
-<h1>New word for <%=@book.title%>!</h1>
 <h2><%= @word.word %></h2>
 <h3><%= @word.part_of_speech %></h3>
 <h3><%= @word.phonetic %></h3>
@@ -11,5 +10,5 @@
 
 
 
-<%= button_to 'Save to Book', "/user/books/#{@book.id}/word/new", method: :get, params: {word: @word.word} %>
+<%= button_to "Save to #{@book.title}", "/user/books/#{@book.id}/word/new", method: :get, params: {word: @word.word} %>
 <%= button_to 'Back to Book', "/user/books/#{@book.id}", method: :get %>
