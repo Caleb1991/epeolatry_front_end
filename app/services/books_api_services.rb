@@ -4,16 +4,20 @@ class BooksApiServices
       response = conn.get('/api/v1/book/search') do |req|
         req.params[:search] = search
       end
-      
-      JSON.parse(response.body, symbolize_names: true)
+      parse_json(response)
     end
   end
 
-  def self.get_a_book(volume_id)
-    response = conn.get('/api/v1/book/search') do |req|
-      req.params[:volume_id] = volume_id
+  def self.get_a_book(volume_id, user_id, auth_token)
+    #will need to confirm endpoint for single book lookup
+    response = conn.get("/api/v1/books/#{volume_id}")  do |req|
+      req.params[:user_id] = user_id
+      req.params[:auth_token] = auth_token
     end
-    
+    parse_json(response)
+  end
+
+  def self.parse_json(response)
     JSON.parse(response.body, symbolize_names: true)
   end
 

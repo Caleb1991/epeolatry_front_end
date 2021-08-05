@@ -39,6 +39,7 @@ gem 'faraday'
 gem 'omniauth-google-oauth2'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.0.1'
+gem 'pagy'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

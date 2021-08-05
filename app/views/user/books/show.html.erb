@@ -1,7 +1,100 @@
-<h1>Word quick check</h1>
+<h2><%= @book.title %></h2>
 
-<%= form_with url: "/users/words/:word", method: :get, local: true do |f| %>
-  <%= f.label :word, "Quick Search" %>
-  <%= f.text_field :word, placeholder: "type word here" %><br><br>
-  <%= f.submit("Search") %>
+<br>
+<br>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+      Author(s)
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <% @book.authors.each do |author| %>
+        <p><%= author %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Genre(s)
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <% @book.genres.each do |genre| %>
+        <p><%= genre %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Book Summary
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <p><%= @book.summary %></p>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+
+<% if !@book.shelves.nil? %>
+  <h3>Current Shelves:</h3>
+    <div class="row">
+    <% @book.shelves.each do |shelf| %>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body" id="<%=@book.id%>-<%=shelf.delete(" ")%>">
+            <h5 class="card-title"><%= shelf %></h5>
+            <%= button_to "Remove", "/user/books/#{@book.id}?shelf=#{shelf}", method: :delete %>
+          </div>
+        </div>
+        </div>
+    <% end %>
+  </div>
+
+  <br>
+  <br>
+
+  <h3>Lookup a Word</h3>
+  <%= form_with url: user_book_word_search_path(@book.id), method: :get, local: true do |f| %>
+    <%= f.label :query, "Lookup a Word" %>
+    <%= f.text_field :query %><br><br>
+    <%= f.submit("Search") %>
+  <% end %>
+
+  <% if !@searched_word.nil? %>
+    <h3>Word Search Results:</h3>
+    <%= link_to @searched_word, "/user/books/#{@book.id}/word/#{@searched_word}" %>
+  <% end %>
+
+  <br>
+  <br>
+
+  <h3>Your Words for <%= @book.title %></h3>
+  <% if !@words.first.nil? %>
+    <% @words.each do |word| %>
+      <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%=word%></h5>
+          <a href="/user/books/#{@book.id}/word/#{word}" class="btn btn-primary">See Definition</a>
+        </div>
+      </div>
+      <br>
+    <% end %>
+
+  <% else %>
+    <p> No words looked up yet!</p>
+  <% end %>
+
+<% else %>
+
+  <%= button_to "Add '#{@book.title}' to my 'To Read' Shelf", "/user/books?id=#{@book.id}"%>
+
 <% end %>
