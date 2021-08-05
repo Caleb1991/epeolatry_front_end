@@ -30,6 +30,7 @@ RSpec.describe 'users books words' do
       click_on('Save to Book')
       expect(current_path).to eq("/user/books/#{book_id}")
       expect(page).to have_content('caterwaul')
+      # expect(page).to have_content("#{word.books}")
     end
   end
 

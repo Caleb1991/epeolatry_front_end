@@ -18,4 +18,16 @@ RSpec.describe 'word Facade' do
       end
     end
   end
+
+  describe 'users words with books' do
+    it 'can find all users words' do
+      VCR.use_cassette 'users words books' do
+        user_id = 12
+        word = 'sad'
+        result = WordFacade.get_books_for_given_word(user_id, word)
+
+        expect(result.books).to eq('sad')
+      end
+    end
+  end
 end
