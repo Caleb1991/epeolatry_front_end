@@ -14,8 +14,7 @@ RSpec.describe 'word Facade' do
       VCR.use_cassette 'users words' do
         user_id = 12
         result = WordFacade.all_users_words(user_id)
-
-        expect(result[0].word).to eq('sad')
+        expect(result.word).to eq('sad')
       end
     end
   end
