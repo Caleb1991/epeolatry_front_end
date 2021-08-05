@@ -1,11 +1,12 @@
-class WordPoro
+class WordBooksPoro
   attr_reader :word,
               :definition,
               :phonetic,
               :phonetic_link,
               :part_of_speech,
               :synonyms,
-              :example
+              :example,
+              :books
 
   def initialize(info)
     @word = info[:word]
@@ -15,5 +16,6 @@ class WordPoro
     @part_of_speech = info[:part_of_speech]
     @synonyms = info[:synonyms]
     @example = info[:example]
+    @books = info[:books]
   end
 end
