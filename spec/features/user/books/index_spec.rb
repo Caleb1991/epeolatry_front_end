@@ -7,7 +7,7 @@ RSpec.describe 'Books index page' do
     .to_return(status: 200, body: File.open('./spec/fixtures/books_index.json').read, headers: {})
   end
 
-  it 'shows all of a users books and the books are links to the books show page' do
+  xit 'shows all of a users books and the books are links to the books show page' do
     visit user_books_path
 
     expect(page).to have_link("Lilith's Brood")
@@ -17,13 +17,13 @@ RSpec.describe 'Books index page' do
     expect(page).to have_link("Snow Crash")
   end
 
-  it 'shows the author of the books' do
+  xit 'shows the author of the books' do
     visit user_books_path
 
     expect(page).to have_content("Author:")
   end
 
-  it 'shows the genre of the book' do
+  xit 'shows the genre of the book' do
     visit user_books_path
 
     expect(page).to have_content("Genre:")
