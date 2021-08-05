@@ -25,7 +25,7 @@ class UserFacade
     end
   end
 
-  def self.remove_book_response(book, auth_token, shelf = 2)
+  def self.remove_book_response(book, auth_token, shelf)
     json = UserApiServices.remove_a_book(book, auth_token, shelf)
 
     if json == 204

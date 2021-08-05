@@ -1,0 +1,54 @@
+<h1><%= @book.title %></h1>
+
+<p>Authors:</p>
+<% @book.authors.each do |author| %>
+  <%= author %>
+<% end %>
+
+<p>Book Summary:</p>
+<%= @book.summary %>
+
+<p>Genre(s):</p>
+<% @book.genres.each do |genre| %>
+  <%= genre %>
+<% end %>
+
+<% if !@book.shelves.nil? %>
+  <p>Current Shelves:</p>
+  <table>
+    <% @book.shelves.each do |shelf| %>
+    <tr id="<%=@book.id%>-<%=shelf.delete(" ")%>">
+      <td><%= shelf %></td>
+      <td><%= button_to "Remove", "/user/books/#{@book.id}?shelf=#{shelf}", method: :delete %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <br>
+
+  <h3>Lookup a Word</h3>
+  <%= form_with url: user_book_word_search_path(@book.id), method: :get, local: true do |f| %>
+    <%= f.label :query, "Lookup a Word" %>
+    <%= f.text_field :query %><br><br>
+    <%= f.submit("Search") %>
+  <% end %>
+
+  <% if !@searched_word.nil? %>
+    <h3>Word Search Results:</h3>
+    <%= link_to @searched_word, "/user/books/#{@book.id}/word/#{@searched_word}" %>
+  <% end %>
+
+  <h3>Your Words for <%= @book.title %></h3>
+  <% if !@words.first.nil? %>
+    <% @words.each do |word| %>
+      <%= link_to word, "/user/books/#{@book.id}/word/#{word}" %>
+    <% end %>
+  <% else %>
+    <p> No words looked up yet!</p>
+  <% end %>
+
+<% else %>
+
+  <%= button_to "Add '#{@book.title}' to my 'To Read' Shelf", "/user/books?id=#{@book.id}"%>
+
+<% end %>
