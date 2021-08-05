@@ -17,4 +17,15 @@ RSpec.describe 'back_end word_api_service' do
       end
     end
   end
+  describe 'words books' do
+    it 'can get books for a users word' do
+      VCR.use_cassette 'words books' do
+      user_id = 12
+      word = 'sad'
+
+      result = WordApiServices.get_word_with_books(user_id, word)
+      expect(result.count).to eq(1)
+      end
+    end
+  end
 end

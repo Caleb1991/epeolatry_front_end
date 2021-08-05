@@ -14,6 +14,14 @@ class WordApiServices
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.get_word_with_books(user_id, word)
+    response = Faraday.get("https://epeolatry-back-end.herokuapp.com/api/v1/user/words/#{word}") do |req|
+      req.params[:user_id] = user_id
+    end
+require "pry"; binding.pry
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.get_words_for_single_book(user_id, book_id)
     response = Faraday.get('') do |req|
       req.params[:user_id] = user_id

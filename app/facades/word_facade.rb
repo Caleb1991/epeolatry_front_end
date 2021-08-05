@@ -14,6 +14,14 @@ class WordFacade
     end[0]
   end
 
+  def self.get_books_for_given_word(user_id, word)
+    json = WordApiServices.get_word_with_books(user_id, word)
+
+    words_books = json.map do |book|
+      WordBookPoro.new(book)
+    end
+  end
+
   def self.one_user_word(user_id, word_id)
     json = WordsApiServices.get_users_words(user_id)
 

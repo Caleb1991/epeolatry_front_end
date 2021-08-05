@@ -13,11 +13,8 @@ RSpec.describe 'Book show page' do
   describe 'for a book in the reader\'s library' do
     it 'shows the books key information' do
       mock_return = File.open('./spec/fixtures/book_show_in_lib_no_words_fixture.json')
-<<<<<<< HEAD
-      stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/book/show?auth_token=#{@user.access_token}&user_id=#{@user.uid}&book_id=#{@book_id}")
-=======
+
       stub_request(:get, "https://epeolatry-back-end.herokuapp.com/api/v1/user/books/#{@book_id}?auth_token=#{@user.access_token}&user_id=#{@user.id}")
->>>>>>> 30e0effc9f516e90ce239364c519f8bb9c4b2579
         .to_return(status: 200, body: mock_return, headers: {})
 
       visit user_book_path(@book_id)
