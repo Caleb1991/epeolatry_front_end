@@ -2,7 +2,7 @@ class User::Books::WordController < ApplicationController
   def show
     @word = WordFacade.search(params[:word]).first
     @book = BookFacade.get_single_book(params[:book_id])
-    # @book = BookPoro.new(title: 'Title', id: params[:book_id])
+    # @word_books = WordBookFacade.get_books_for_given_word(current_user.uid, params[:word])
   end
 
   def new
