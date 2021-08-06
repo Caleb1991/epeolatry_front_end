@@ -10,13 +10,5 @@
         "shelves":null}
       },
   "wordData":
-    [
-      {"id":null,
-      "type":"word",
-      "attributes":
-         {
-           "word":null
-          }
-      }
-    ]
+    []
   }
