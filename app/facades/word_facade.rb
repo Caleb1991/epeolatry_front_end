@@ -12,7 +12,7 @@ class WordFacade
 
     return 'No Words Saved' if attributes.class != Array
     attributes.map do |attributes|
-      WordBooksPoro.new(attributes[:attributes])
+      WordPoro.new(attributes[:attributes])
     end
   end
 

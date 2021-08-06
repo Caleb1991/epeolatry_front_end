@@ -27,13 +27,6 @@
                 <li><b>Part of Speech: </b><%= word.part_of_speech %></li>
                 <li><b>Example sentence: </b><%= word.example %></li>
                 <li><b>Synonyms: </b><%= word.synonyms %></li>
-                <li><b>Books linked to this word: </b>
-                  <ul>
-                    <% word.books.each do |book| %>
-                      <li><%= link_to book[0], user_book_path(book[1]) %></li>
-                    <% end %>
-                  </ul>
-                </li>
               </ul>
             </li>
           <% end %>
