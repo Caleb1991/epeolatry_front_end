@@ -1,7 +1,7 @@
 <h1><%= @title_welcome %></h1>
 <h5><%= @descrip %></h5>
 <br>
-<div class="ailgn-items-center">
+<div class="align-items-center">
   <% if current_user %>
     <h1><%= "#{greetings.sample}, #{current_user.username.split("@").first}!" %></h1>
   <% else %>
