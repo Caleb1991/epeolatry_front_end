@@ -1,13 +1,10 @@
 class User::Books::WordController < ApplicationController
-  def show
-    @word = WordFacade.search(params[:word]).first
-    @book = BookFacade.get_single_book(params[:book_id], current_user.id, current_user.access_token)[:book]
-    # @book = BookPoro.new(title: 'Title', id: params[:book_id])
-  end
-
-  def new
-    UserFacade.create_glossary_response(params[:word], current_user.id, params[:book_id])
-    redirect_to "/user/books/#{params[:book_id]}"
+  def show # Need to spruce up to work correctly for this route
+    if params[:word]
+      @word = WordFacade.search(params[:word]).first
+    else
+      @word = current_user.words.find_by(params[:word])
+    end
   end
 
   def search
@@ -16,7 +13,7 @@ class User::Books::WordController < ApplicationController
       @word = response.first
       redirect_to "/user/books/#{params[:book_id]}?word_search=#{@word.word}"
     else
-      flash[:error] = "Word not found"
+      flash[:errpr] = "Word not found"
       redirect_to "/user/books/#{params[:book_id]}"
     end
   end
