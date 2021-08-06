@@ -6,7 +6,7 @@
 <% end %>
 
 <h3>Search for a Book</h3>
-<%= form_with url: user_books_path, method: :get, local: true do |f| %>
+<%= form_with url: "/user/books", method: :get, local: true do |f| %>
   <%= f.label :search, "Search for a Book" %>
   <%= f.text_field :search %><br><br>
   <%= f.submit("Search") %>

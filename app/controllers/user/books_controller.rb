@@ -1,11 +1,7 @@
 class User::BooksController < ApplicationController
   def index
-    if !params[:search].nil?
       @books = UserFacade.get_my_books(current_user.access_token)
       @searched_books = BookFacade.search_for_books(params[:search])
-    else
-      @books = UserFacade.get_my_books(current_user.access_token)
-    end
   end
 
   def show
