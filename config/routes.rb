@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :dashboard, only: [:show]
     resources :words, only: [:index, :show]
     resources :books, only: [:index, :show, :create, :destroy] do
-      get '/word/new', to: 'books/word#new'
       get '/word/search', to: 'books/word#search'
       get '/word/:word', to: 'books/word#show'
     end
