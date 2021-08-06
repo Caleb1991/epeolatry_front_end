@@ -5,7 +5,7 @@ RSpec.describe 'users books words' do
     VCR.turn_on!
   end
 
-  xit 'unsaved word show' do
+  it 'unsaved word show' do
     user1 = User.create!(username: 'test', access_token: 'fake token', uid: '1233')
     User::Books::WordController.any_instance.stub(:current_user).and_return(user1)
     VCR.use_cassette 'book word search' do
@@ -36,7 +36,7 @@ RSpec.describe 'users books words' do
     end
   end
 
-  xit 'dont save word' do
+  it 'dont save word' do
     user1 = User.create!(username: 'test', access_token: 'fake token', uid: '1233')
     User::Books::WordController.any_instance.stub(:current_user).and_return(user1)
     User::BooksController.any_instance.stub(:current_user).and_return(user1)
