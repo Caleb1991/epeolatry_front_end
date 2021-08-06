@@ -42,7 +42,6 @@ RSpec.describe 'As an authenticated user' do
 
       describe 'word stats' do
         it 'displays average words saved per book' do
-          binding.pry
           expect(page).to have_content("Your Word Stats")
           #add section
           expect(page).to have_content("Average Saved per Book: #{@word_stats[:avg_per_book]}")
