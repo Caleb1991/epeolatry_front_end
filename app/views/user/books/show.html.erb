@@ -23,9 +23,7 @@
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <% @book.genres.each do |genre| %>
-        <p><%= genre %></p>
-      <% end %>
+      <%= @book.genres  %>
     </div>
   </div>
   <div class="accordion-item">
