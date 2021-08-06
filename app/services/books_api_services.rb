@@ -10,9 +10,11 @@ class BooksApiServices
 
   def self.get_a_book(volume_id, user_id, auth_token)
     #will need to confirm endpoint for single book lookup
-    response = conn.get("/api/v1/user/books/#{volume_id}")  do |req|
-      req.params[:user_id] = user_id
-      req.params[:auth_token] = auth_token
+    Rails.cache.fetch("#{volume_id}_information", expires_in: 18.hours) do
+      response = conn.get("/api/v1/user/books/#{volume_id}")  do |req|
+        req.params[:user_id] = user_id
+        req.params[:auth_token] = auth_token
+      end
     end
     parse_json(response)
   end
