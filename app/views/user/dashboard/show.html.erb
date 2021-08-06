@@ -1,6 +1,3 @@
-<div class="text-center">
-  <button type="button" class="btn btn-secondary" style="float: center;"><a href="/user/books">My Beautiful Bevy of Books</a></button>
-</div>
-<div class="text-center">
-  <button type="button" class="btn btn-secondary" style="float: center;"><a href="/user/words">My Wordly World of Words</a></button>
-</div>
+<%= button_to "My Beautiful Bevy of Books", user_books_path, method: :get %>
+<br>
+<%= button_to "My Wordly World of Words", user_words_path, method: :get %>
