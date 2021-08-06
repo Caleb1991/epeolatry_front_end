@@ -1,10 +1,9 @@
 class User::WordsController < ApplicationController
   def index
-    #make service call to back end to find users words
-    # @words = @user.words.all
+    @words = WordFacade.all_users_words(current_user.id)
   end
 
   def show # moved to books word_controller
-
+    # @word = WordFacade.
   end
 end
